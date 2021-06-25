@@ -1,0 +1,176 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Bellota:wght@400;700&display=swap");
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+}
+
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  color: #ffffff;
+  transition: all 0.3s;
+}
+.l-header__inner {
+  max-width: 1800px;
+  height: 70px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.l-header__logo {
+  max-width: 250px;
+  height: 40px;
+  margin: 0;
+}
+.l-header__logo:hover {
+  opacity: 0.8;
+}
+.l-header__nav {
+  width: 100%;
+  width: 375px;
+}
+.l-header__list {
+  display: flex;
+  justify-content: space-between;
+}
+.l-header__item {
+  font-size: 1.6rem;
+}
+.l-header__item:hover {
+  opacity: 0.8;
+}
+.l-header.is-fixed {
+  color: #000000;
+  transition: all 0.3s;
+}
+
+.l-footer {
+  background-color: #18a0fb;
+  color: #ffffff;
+  font-size: 18px;
+  height: 30px;
+  text-align: center;
+}
+
+.p-home-firstview {
+  background-image: url(/assets/images/Hero.png);
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  width: 1280px;
+  width: 100%;
+  height: 100vh;
+}
+.p-home-firstview__inner {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 0;
+  stroke-dasharray: 1500;
+  /* この行を追加 */
+  stroke-dashoffset: 1500;
+  /* この行を追加 */
+}
+.p-home-firstview__hero {
+  position: relative;
+  height: 100vh;
+}
+.p-home-firstview__hero-item {
+  height: 180px;
+  min-width: 695px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+.p-home-firstview #catchcopy {
+  width: 695px;
+  margin: 0 auto;
+}
+.p-home-firstview #catchcopy .st0 {
+  display: block;
+  width: 50px;
+}
+
+.p-home-about {
+  padding: 40px 0 50px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 920px;
+}
+.p-home-about__bodys {
+  display: flex;
+  align-items: center;
+  height: 32px;
+}
+.p-home-about__name {
+  font-weight: bold;
+  font-size: 24px;
+}
+.p-home-about__spell {
+  font-size: 18px;
+  margin-left: 20px;
+}
+.p-home-about__description {
+  width: 100%;
+  max-width: 635px;
+  height: 182px;
+  font-size: 18px;
+  margin-top: 15px;
+}
+.p-home-about__icon img {
+  width: 200px;
+  height: 200px;
+  display: block;
+  border-radius: 9999px;
+}
+.p-home-about .a {
+  display: flex;
+}
+
+.p-home-portfolio {
+  background-color: #f8f9fa;
+  padding: 40px 0 79px;
+}
+.c-heading {
+  font-size: 36px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

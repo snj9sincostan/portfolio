@@ -1,0 +1,40 @@
+.p-home-about {
+  padding: 40px 0 50px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 920px;
+
+  &__bodys {
+    display: flex;
+    align-items: center;
+    height: 32px;
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 24px;
+  }
+  &__spell {
+    font-size: 18px;
+    margin-left: 20px;
+  }
+  &__description {
+    width: 100%;
+    max-width: 635px;
+    height: 182px;
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  &__icon {
+    img {
+      width: 200px;
+      height: 200px;
+      display: block;
+      border-radius: 9999px;
+    }
+  }
+
+  .a {
+    display: flex;
+  }
+}

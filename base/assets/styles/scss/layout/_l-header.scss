@@ -1,0 +1,51 @@
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  color: $color_white;
+  transition: all 0.3s;
+
+  &__inner {
+    max-width: 1800px;
+    height: 70px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    max-width: 250px;
+    height: 40px;
+    margin: 0;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__nav {
+    width: 100%;
+    width: 375px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    font-size: 1.6rem;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &.is-fixed {
+    color: $color_black;
+    transition: all 0.3s;
+  }
+}
+
