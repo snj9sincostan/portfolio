@@ -3,5 +3,12 @@
   padding: 40px 0 79px;
 
   &__inner {
+    display: flex;
+    align-items: center;
+    width: 840px;
+    margin: 61px auto 0;
+  }
+  .c-card:nth-of-type(n + 2) {
+    margin-left: 37px;
   }
 }

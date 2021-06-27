@@ -1,4 +1,4 @@
-// @import "./scss/foundation/reset";
+@import "./scss/foundation/reset";
 @import "./scss/foundation/variables";
 @import "./scss/foundation/base";
 @import "./scss/layout/l-header";
@@ -7,4 +7,7 @@
 @import "./scss/object/project/firstview";
 @import "./scss/object/project/about";
 @import "./scss/object/project/portfolio";
+@import "./scss/object/project/skill";
+@import "./scss/object/project/contact";
 @import "./scss/object/components/heading";
+@import "./scss/object/components/card";
