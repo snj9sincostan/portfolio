@@ -567,6 +567,18 @@ h1, h2, h3, h4, h5, p {
 .p-home-skill {
   padding: 50px 0 143px;
 }
+.p-home-skill__body {
+  max-width: 868px;
+  margin: 0 auto;
+}
+.p-home-skill__icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.p-home-skill__icons .c-skillicon {
+  width: calc(20% - 10px);
+}
 
 .p-home-contact {
   background-image: url(/assets/images/Contact-body.png);
@@ -594,6 +606,10 @@ h1, h2, h3, h4, h5, p {
   font-size: 1.2rem;
   line-height: 1;
   letter-spacing: 1;
+}
+
+.c-skillicon {
+  width: 128px;
 }
 
 /*# sourceMappingURL=style.css.map */
