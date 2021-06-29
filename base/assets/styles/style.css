@@ -569,12 +569,13 @@ h1, h2, h3, h4, h5, p {
 }
 .p-home-skill__body {
   max-width: 868px;
-  margin: 0 auto;
+  margin: 52px auto 0;
 }
 .p-home-skill__icons {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 75px;
 }
 .p-home-skill__icons .c-skillicon {
   width: calc(20% - 10px);
@@ -610,6 +611,41 @@ h1, h2, h3, h4, h5, p {
 
 .c-skillicon {
   width: 128px;
+}
+
+.c-tab {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  width: 300px;
+  padding: 0;
+  margin: 0 auto;
+}
+.c-tab__item {
+  border-radius: 9999px;
+  cursor: pointer;
+  font-size: 2.6rem;
+}
+.c-tab__item:nth-of-type(n + 2) {
+  margin-left: 15px;
+}
+.c-tab__item.is-active {
+  background-color: #18a0fb;
+  color: #ffffff;
+  padding: 0 20px;
+}
+
+.c-primarybutton {
+  background-color: #18a0fb;
+  border-radius: 9999px;
+  border: none;
+  padding: 5px 20px;
+  font-size: 1.6rem;
+  width: 250px;
+}
+.c-primarybutton a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */

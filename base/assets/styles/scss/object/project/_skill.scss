@@ -3,13 +3,14 @@
 
   &__body {
     max-width: 868px;
-    margin: 0 auto;
+    margin: 52px auto 0;
   }
 
   &__icons {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 75px;
 
     .c-skillicon {
       width: calc(20% - 10px);

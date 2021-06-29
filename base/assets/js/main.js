@@ -45,6 +45,15 @@ const addHeaderStyle = () => {
   $window.on('scroll', toggleClass);
 }
 
+const changeSkillPanel = () => {
+  const active = $('is-active');
+  const $skillTab = $('.c-tab__item');
+  $skillTab.on('click', function() {
+    this.toggleClass('is-active')
+  })
+
+}
+changeSkillPanel()
 initVivus()
 smoothScroll()
 addHeaderStyle()
