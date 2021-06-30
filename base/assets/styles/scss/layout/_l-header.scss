@@ -2,13 +2,13 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 999;
   width: 100%;
   color: $color_white;
   transition: all 0.3s;
 
   &__inner {
-    max-width: 1800px;
+    max-width: 1280px;
     height: 70px;
     margin: 0 auto;
     padding: 0 20px;
@@ -18,7 +18,7 @@
   }
 
   &__logo {
-    max-width: 250px;
+    width: 250px;
     height: 40px;
     margin: 0;
     &:hover {
@@ -27,8 +27,8 @@
   }
 
   &__nav {
+    max-width: 375px;
     width: 100%;
-    width: 375px;
   }
 
   &__list {
@@ -45,7 +45,21 @@
 
   &.is-fixed {
     color: $color_black;
+    background-color: $color_white;
     transition: all 0.3s;
+    .l-header__burger-line {
+      background-color: $color_black;
+      transition: all 0.3s;
+    }
+  }
+  &.is-active {
+    .l-header__logo {
+      color: #000;
+    }
+  }
+
+  &__burger {
+    display: none;
   }
 }
 
@@ -53,31 +67,60 @@
   .l-header {
     &__nav {
       display: none;
+
+      &.is-show {
+        background-color: $color_white;
+        color: $color_black;
+        display: block;
+      }
     }
+    .is-show & {
+      &__list {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: $color_white;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding-top: 70px;
+        z-index: -1;
+      }
+      &__item {
+        text-align: center;
+        margin-top: 20px;
+      }
+    }
+
     &__burger {
+      background-color: transparent;
+      border: none;
       display: block;
-      position: relative;
-      width: 1.75rem;
-      height: 1.5rem;
-    }
-    &__burger-line {
-      display: block;
-      width: 100%;
-      height: 2px;
-      background-color: #333;
-      position: absolute;
-      transition: transform .5s, opacity .5s;
-    }
-    &__burger-line:nth-child(1) {
-      top: 0;
-    }
-    &__burger-line:nth-child(2) {
-      top: 0;
-      bottom: 0;
-      margin: auto;
-    }
-    &__burger-line:nth-child(3) {
-      bottom: 0;
+      margin-left: auto;
+      &-line {
+        background-color: $color_white;
+        width: 35px;
+        height: 2px;
+        display: block;
+        margin-bottom: 9px;
+        transition: transform 0.3s;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .is-open & {
+          background-color: $color_black;
+          &:nth-child(1) {
+            transform: translateY(11px) rotate(135deg);
+          }
+          &:nth-child(2) {
+            transform: translateX(-18px) scaleX(0);
+          }
+          &:nth-child(3) {
+            transform: translateY(-11px) rotate(-135deg);
+          }
+        }
+      }
     }
   }
 }

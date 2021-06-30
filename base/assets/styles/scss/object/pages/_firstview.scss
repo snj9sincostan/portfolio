@@ -32,11 +32,19 @@
     }
   }
   #catchcopy {
-    width: 695px;
+    width: 100%;
+    max-width: 695px;
     margin: 0 auto;
     .st0 {
       display: block;
       width: 50px;
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #catchcopy {
+    width: 300px;
+    height: 82px;
   }
 }

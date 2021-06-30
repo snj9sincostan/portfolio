@@ -4,12 +4,14 @@
 @import "./scss/layout/l-header";
 @import "./scss/layout/l-main";
 @import "./scss/layout/l-footer";
-@import "./scss/object/project/firstview";
-@import "./scss/object/project/about";
-@import "./scss/object/project/portfolio";
-@import "./scss/object/project/skill";
-@import "./scss/object/project/contact";
+@import "./scss/object/pages/firstview";
+@import "./scss/object/pages/about";
+@import "./scss/object/pages/portfolio";
+@import "./scss/object/pages/skill";
+@import "./scss/object/pages/contact";
 @import "./scss/object/components/heading";
 @import "./scss/object/components/card";
 @import "./scss/object/components/skill-icon";
 @import "./scss/object/components/button-contact";
+
+@import "./scss/object//utility/bodyhidden";

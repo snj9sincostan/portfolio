@@ -1,5 +1,11 @@
 .p-home-contact {
   background-image: url(/assets/images/Contact-body.png);
   background-size: cover;
+  background-position: center;
   padding: 40px 0 78px;
+
+  &__button {
+    margin: 106px auto 0;
+    display: block;
+  }
 }

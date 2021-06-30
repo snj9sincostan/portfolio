@@ -11,7 +11,7 @@ const initVivus = () => {
 
 const smoothScroll = () => {
   const speed = 700;
-  const sectionTopDistance = 49;
+  const sectionTopDistance = 70;
   $('a[href*="#"]').on('click', function () {
     let href = $(this).attr("href");
     const developmentURL = location.protocol + "//" + location.hostname + ":8888" + location.pathname;
@@ -49,11 +49,36 @@ const changeSkillPanel = () => {
   const active = $('is-active');
   const $skillTab = $('.c-tab__item');
   $skillTab.on('click', function() {
-    this.toggleClass('is-active')
+    this.toggleClass(active)
   })
-
 }
+
+const changeBurgerMenu = () => {
+  const $body = $('body'); //スクロール防止
+  const $header = $('.l-header');
+  const $burgerIcon = $('.l-header__burger');
+  const $headerNav = $('.l-header__nav');
+  const $navItem = $('.l-header__item')
+
+  const clickCloseNavMenu = () => {
+    $burgerIcon.trigger('click');
+  }
+
+  $burgerIcon.on('click', function() {
+    $body.toggleClass('no-scroll');
+    $burgerIcon.toggleClass('is-open');
+    $headerNav.toggleClass('is-show');
+    $header.toggleClass('is-fixed is-active');
+  })
+  $navItem.on('click', clickCloseNavMenu);
+}
+
+const initPlugins = () => {
+  initVivus()
+}
+
+// initPlugins()
+changeBurgerMenu()
 changeSkillPanel()
-initVivus()
 smoothScroll()
 addHeaderStyle()
