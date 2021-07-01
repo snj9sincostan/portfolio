@@ -79,11 +79,11 @@
       <h2 class="c-heading">About</h2>
       <div class="p-home-about__inner">
         <div class="p-home-about__body">
-          <div class="p-home-about__name animate__animated animate__fadeInLeft">
+          <div class="p-home-about__name animate__animated" animation="animate__fadeInLeft">
             <p class="p-home-about__ja">西原 伸治</p>
             <p class="p-home-about__en">Nishihara Shinji</p>
           </div>
-          <div class="p-home-about__description animate__animated animate__fadeInUp">
+          <div class="p-home-about__description animate__animated" animation="animate__fadeInUp">
             <p>Webフロントエンドエンジニアです。</p>
             <p>【略歴】</p>
             <p>地元専門学校を卒業後、半導体エンジニアを2年経験。その後自身のキャリアの幅を広げるべくIT業界へ。現在はフロントエンドエンジニアとして活動中です。</p>
@@ -91,58 +91,61 @@
             <p>ボウリング/ダーツ/ゲーム/料理</p>
           </div>
         </div>
-        <p class="p-home-about__icon animate__animated animate__rollIn">
+        <p class="p-home-about__icon animate__animated" animation="animate__rollIn">
           <img src="./assets/images/icon.png" alt="西原伸治">
         </p>
       </div>
     </section>
-    <!-- <section class="p-home-portfolio" id="portfolio">
+    <section class="p-home-portfolio" id="portfolio">
       <h2 class="c-heading">Portfolio</h2>
       <div class="p-home-portfolio__inner">
-        <div class="c-card">
+        <article class="c-card p-home-portfolio__card animate__animated" animation="animate__fadeInUp">
+          <p class="c-card__image">
+            <img src="/assets/images/Hero.png" alt="">
+          </p>
           <h3 class="c-card__title">ポートフォリオ名</h3>
-          <div class="c-card__wrap">
-            <p class="c-card__image">
-              <img src="./assets/images/Hero.png" alt="ポートフォリオ名">
-            </p>
-            <p class="c-card__text">
-              テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、
-            </p>
-          </div>
-        </div>
-        <div class="c-card">
+          <p class="c-card__text">
+            テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、
+          </p>
+          <button class="c-primarybutton p-home-portfolio__button">
+            <a href="contact.html">Corrected</a>
+          </button>
+        </article>
+        <article class="c-card p-home-portfolio__card animate__animated" animation="animate__fadeInUp">
+          <p class="c-card__image">
+            <img src="/assets/images/Hero.png" alt="">
+          </p>
           <h3 class="c-card__title">ポートフォリオ名</h3>
-          <div class="c-card__wrap">
-            <p class="c-card__image">
-              <img src="./assets/images/Hero.png" alt="ポートフォリオ名">
-            </p>
-            <p class="c-card__text">
-              テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、
-            </p>
-          </div>
-        </div>
-        <div class="c-card">
+          <p class="c-card__text">
+            テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、
+          </p>
+          <button class="c-primarybutton">
+            <a href="contact.html">Corrected</a>
+          </button>
+        </article>
+        <article class="c-card p-home-portfolio__card animate__animated" animation="animate__fadeInUp">
+          <p class="c-card__image">
+            <img src="/assets/images/Hero.png" alt="">
+          </p>
           <h3 class="c-card__title">ポートフォリオ名</h3>
-          <div class="c-card__wrap">
-            <p class="c-card__image">
-              <img src="./assets/images/Hero.png" alt="ポートフォリオ名">
-            </p>
-            <p class="c-card__text">
-              テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、
-            </p>
-          </div>
-        </div>
+          <p class="c-card__text">
+            テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、
+          </p>
+          <button class="c-primarybutton">
+            <a href="contact.html">Corrected</a>
+          </button>
+        </article>
       </div>
-    </section> -->
+    </section>
     <section class="p-home-skill" id="skill">
       <h2 class="c-heading">Skill</h2>
       <div class="p-home-skill__body">
-        <ul class="c-tab" id="tab">
+        <ul class="c-tab animate__animated" id="tab" animation="animate__fadeInUp">
           <li class="c-tab__item is-active" data-filter="all">All</li>
           <li class="c-tab__item" data-filter="language">Language</li>
           <li class="c-tab__item" data-filter="tools">Tools</li>
         </ul>
-        <div class="p-home-skill__list" id="icons">
+        <div class="p-home-skill__list animate__animated" id="icons" animation="animate__fadeInUp">
           <p class="c-skillicon p-home-skill__icon" data-category="language">
             <img src="/assets/images/html5.svg" alt="HTML5" class="c-skillicon__image">
           </p>

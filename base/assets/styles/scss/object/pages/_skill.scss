@@ -1,5 +1,5 @@
 .p-home-skill {
-  padding: 50px 0 143px;
+  padding: 50px 0 63px;
 
   &__body {
     max-width: 840px;
@@ -14,11 +14,9 @@
 
   &__icon {
     width: calc(20% - 40px);
+    margin-bottom: 80px;
     &:not(:nth-of-type(5n + 1)) {
       margin-left: 50px;
-    }
-    &:nth-of-type(n + 6) {
-      margin-top: 80px;
     }
   }
 }

@@ -1,18 +1,67 @@
+// .c-card {
+//   max-width: 255px;
+
+//   &__title {
+//     min-width: 190px;
+//     font-size: 2.4rem;
+//     margin: 0 auto;
+//     text-align: center;
+//   }
+
+//   &__text {
+//     // padding: 15px 10px;
+//     padding: 0 20px 20px;
+//     background-color: $color_white;
+//     font-size: 1.2rem;
+//     line-height: 1;
+//     letter-spacing: 1;
+//   }
+// }
+
 .c-card {
-  max-width: 255px;
+  border-right-color: $color_white;
+  border: none;
+  box-shadow: 2px 2px 6px 0 rgba(0,0,0,0.3);
+  border-radius: 20px;
+  text-align: center;
+  width: 405px;
+  // h405
+  transition: transform 0.3s;
+  background-color: $color_white;
+  padding-bottom: 15px;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 2px 2px 26px 0px rgba(0,0,0,0.3);
+  }
+
+  &__image {
+    img {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+  }
 
   &__title {
     min-width: 190px;
     font-size: 2.4rem;
-    margin: 0 auto;
+    padding: 10px 5px 0;
+    // margin: 0 auto;
     text-align: center;
   }
-
   &__text {
-    padding: 15px 10px;
-    background-color: $color_white;
+    padding: 10px 20px;
     font-size: 1.2rem;
-    line-height: 1;
-    letter-spacing: 1;
+    line-height: 1.2;
+    letter-spacing: 1.2;
+  }
+}
+
+.c-card.animate__fadeInUp {
+  &:nth-of-type(2) {
+    animation-delay: .3s;
+  }
+  &:nth-of-type(3) {
+    animation-delay: .6s;
   }
 }

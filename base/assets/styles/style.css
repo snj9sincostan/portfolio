@@ -629,12 +629,15 @@ h1, h2, h3, h4, h5, p {
   width: 840px;
   margin: 61px auto 0;
 }
-.p-home-portfolio .c-card:nth-of-type(n + 2) {
+.p-home-portfolio__card:not(:first-child) {
   margin-left: 37px;
+}
+.p-home-portfolio__button {
+  width: 180px;
 }
 
 .p-home-skill {
-  padding: 50px 0 143px;
+  padding: 50px 0 63px;
 }
 .p-home-skill__body {
   max-width: 840px;
@@ -647,12 +650,10 @@ h1, h2, h3, h4, h5, p {
 }
 .p-home-skill__icon {
   width: calc(20% - 40px);
+  margin-bottom: 80px;
 }
 .p-home-skill__icon:not(:nth-of-type(5n + 1)) {
   margin-left: 50px;
-}
-.p-home-skill__icon:nth-of-type(n + 6) {
-  margin-top: 80px;
 }
 
 .p-home-contact {
@@ -664,6 +665,7 @@ h1, h2, h3, h4, h5, p {
 .p-home-contact__button {
   margin: 106px auto 0;
   display: block;
+  width: 250px;
 }
 
 .c-heading {
@@ -672,20 +674,42 @@ h1, h2, h3, h4, h5, p {
 }
 
 .c-card {
-  max-width: 255px;
+  border-right-color: #ffffff;
+  border: none;
+  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  text-align: center;
+  width: 405px;
+  transition: transform 0.3s;
+  background-color: #ffffff;
+  padding-bottom: 15px;
+}
+.c-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 2px 2px 26px 0px rgba(0, 0, 0, 0.3);
+}
+.c-card__image img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 .c-card__title {
   min-width: 190px;
   font-size: 2.4rem;
-  margin: 0 auto;
+  padding: 10px 5px 0;
   text-align: center;
 }
 .c-card__text {
-  padding: 15px 10px;
-  background-color: #ffffff;
+  padding: 10px 20px;
   font-size: 1.2rem;
-  line-height: 1;
-  letter-spacing: 1;
+  line-height: 1.2;
+  letter-spacing: 1.2;
+}
+
+.c-card.animate__fadeInUp:nth-of-type(2) {
+  animation-delay: 0.3s;
+}
+.c-card.animate__fadeInUp:nth-of-type(3) {
+  animation-delay: 0.6s;
 }
 
 .c-tab {
@@ -738,14 +762,17 @@ h1, h2, h3, h4, h5, p {
   border: none;
   padding: 5px 20px;
   font-size: 1.6rem;
-  width: 250px;
+  cursor: pointer;
 }
 .c-primarybutton a {
   text-decoration: none;
   color: #ffffff;
 }
+.c-primarybutton:hover {
+  opacity: 0.8;
+}
 
-body.no-scroll {
+.u-no-scroll {
   overflow: hidden;
 }
 
@@ -761,6 +788,10 @@ body.no-scroll {
 }
 .animate__animated.animate__rollIn {
   animation-name: override-rollIn;
+}
+
+.is-invisible {
+  visibility: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */

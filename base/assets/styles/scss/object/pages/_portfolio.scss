@@ -8,7 +8,10 @@
     width: 840px;
     margin: 61px auto 0;
   }
-  .c-card:nth-of-type(n + 2) {
+  &__card:not(:first-child) {
     margin-left: 37px;
+  }
+  &__button {
+    width: 180px;
   }
 }

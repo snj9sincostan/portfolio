@@ -57,7 +57,7 @@ const changeBurgerMenu = () => {
   }
 
   $burgerIcon.on('click', function() {
-    $body.toggleClass('no-scroll');
+    $body.toggleClass('u-no-scroll');
     $burgerIcon.toggleClass('is-open');
     $headerNav.toggleClass('is-show');
     $header.toggleClass('is-fixed is-active');
@@ -92,13 +92,48 @@ const changeSkillPanel = () => {
   });
 }
 
-
+const upFadeIn = () => {
+  const $window = $(window);
+  const scroll = $window.scrollTop();
+  const windowHeight = $window.height();
+}
 const initPlugins = () => {
   initVivus()
 }
 
 // initPlugins()
-changeBurgerMenu()
-changeSkillPanel()
-smoothScroll()
-addHeaderStyle()
+changeBurgerMenu();
+changeSkillPanel();
+smoothScroll();
+addHeaderStyle();
+
+
+const addAnimationStyle = () => {
+  //アニメーション属性を持つ要素を非表示、animated属性を追加
+  const $window = $(window);
+  const $animationAttributeHaveElements = $('*[animation]');
+  $animationAttributeHaveElements.addClass('is-invisible');
+
+  $window.on('scroll',function () {
+    $animationAttributeHaveElements.each(function () {
+      const elementPosition = $(this).offset().top;
+      const scroll = $(window).scrollTop();
+      const position = elementPosition - (window.innerHeight * 2) / 3;
+
+      //animation属性に記載されたアニメーション名を取得
+      if (this.hasAttribute('animation') && (scroll > position)) {
+        const animation = this.getAttribute('animation');
+        $(this).removeClass('is-invisible').addClass(animation);
+        // if (scroll > position) {
+        //   $(this).removeClass('is-invisible').addClass(animation);
+        // }
+        //ページのトップまでスクロールしたら要素を非表示（リセット） テスト用
+        // if (scroll < 10) {
+        //   $(this).removeClass(animation).addClass('is-invisible');
+        // }
+      }
+    });
+  });
+}
+
+addAnimationStyle();
