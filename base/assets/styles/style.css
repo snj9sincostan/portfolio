@@ -626,16 +626,27 @@ h1, h2, h3, h4, h5, p {
 .p-home-portfolio__inner {
   display: flex;
   align-items: center;
-  width: 840px;
+  max-width: 840px;
   margin: 61px auto 0;
 }
 .p-home-portfolio__card:not(:first-child) {
-  margin-left: 37px;
+  margin-left: 50px;
 }
 .p-home-portfolio__button {
   width: 180px;
 }
 
+@media screen and (max-width: 768px) {
+  .p-home-portfolio__inner {
+    display: block;
+  }
+  .p-home-portfolio__card {
+    margin: 0 auto;
+  }
+  .p-home-portfolio__card:not(:first-child) {
+    margin: 40px auto 0;
+  }
+}
 .p-home-skill {
   padding: 50px 0 63px;
 }
@@ -656,6 +667,25 @@ h1, h2, h3, h4, h5, p {
   margin-left: 50px;
 }
 
+@media screen and (max-width: 768px) {
+  .p-home-skill__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .p-home-skill__icon {
+    width: calc(50% - 40px);
+    margin: 0 auto;
+  }
+  .p-home-skill__icon:not(:nth-of-type(5n + 1)) {
+    margin-left: auto;
+  }
+  .p-home-skill__icon:nth-of-type(n + 3) {
+    margin-top: 40px;
+  }
+  .p-home-skill__icon:nth-child(2n) {
+    margin-left: auto;
+  }
+}
 .p-home-contact {
   background-image: url(/assets/images/Contact-body.png);
   background-size: cover;
@@ -679,7 +709,8 @@ h1, h2, h3, h4, h5, p {
   box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.3);
   border-radius: 20px;
   text-align: center;
-  width: 405px;
+  width: 255px;
+  height: 316px;
   transition: transform 0.3s;
   background-color: #ffffff;
   padding-bottom: 15px;
@@ -699,19 +730,33 @@ h1, h2, h3, h4, h5, p {
   text-align: center;
 }
 .c-card__text {
-  padding: 10px 20px;
+  padding: 0px 20px;
   font-size: 1.2rem;
-  line-height: 1.2;
   letter-spacing: 1.2;
+  height: 64px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
-.c-card.animate__fadeInUp:nth-of-type(2) {
-  animation-delay: 0.3s;
+@media screen and (min-width: 769px) {
+  .c-card.animate__fadeInUp:nth-of-type(2) {
+    animation-delay: 0.3s;
+  }
+  .c-card.animate__fadeInUp:nth-of-type(3) {
+    animation-delay: 0.6s;
+  }
 }
-.c-card.animate__fadeInUp:nth-of-type(3) {
-  animation-delay: 0.6s;
+@media screen and (max-width: 768px) {
+  .c-card.animate__fadeInUp:nth-of-type(2) {
+    animation-delay: 0.3s;
+  }
+  .c-card.animate__fadeInUp:nth-of-type(3) {
+    animation-delay: 0.3s;
+  }
 }
-
 .c-tab {
   display: flex;
   justify-content: space-between;
@@ -753,9 +798,8 @@ h1, h2, h3, h4, h5, p {
 }
 
 .c-skillicon {
-  width: 128px;
+  min-width: 128px;
 }
-
 .c-primarybutton {
   background-color: #18a0fb;
   border-radius: 9999px;

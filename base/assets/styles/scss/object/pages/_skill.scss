@@ -20,3 +20,25 @@
     }
   }
 }
+@media screen and (max-width: 768px) {
+  .p-home-skill {
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__icon {
+      width: calc(50% - 40px);
+      margin: 0 auto;
+      &:not(:nth-of-type(5n + 1)) {
+        margin-left: auto;
+      }
+      &:nth-of-type(n + 3) {
+        margin-top: 40px;
+      }
+      &:nth-child(2n) {
+        margin-left: auto;
+      }
+    }
+  }
+}
