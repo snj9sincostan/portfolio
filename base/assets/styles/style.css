@@ -698,6 +698,27 @@ h1, h2, h3, h4, h5, p {
   width: 250px;
 }
 
+.p-page-portfolio {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 50px 20px 150px;
+}
+.p-page-portfolio__wrapper {
+  margin-top: 51px;
+}
+.p-page-portfolio__description {
+  margin-top: 50px;
+}
+.p-page-portfolio__text {
+  font-size: 2.4rem;
+}
+.p-page-portfolio__button {
+  width: 250px;
+  margin: 75px auto 0;
+  display: block;
+}
+
 .c-heading {
   font-size: 36px;
   text-align: center;
@@ -814,6 +835,28 @@ h1, h2, h3, h4, h5, p {
 }
 .c-primarybutton:hover {
   opacity: 0.8;
+}
+
+.c-secondaryHeading {
+  font-size: 3.2rem;
+  color: #000000;
+  position: relative;
+  padding-top: 50px;
+  padding-left: 30px;
+  font-size: 26px;
+}
+.c-secondaryHeading::before {
+  content: attr(data-en);
+  font-family: "Bellota", cursive;
+  position: absolute;
+  transform: rotate(-5deg);
+  top: -20px;
+  left: 0;
+  color: rgba(52, 131, 225, 0.3);
+  font-size: 80px;
+  font-weight: 400;
+  font-family: luxus-brut, cursive;
+  font-style: italic;
 }
 
 .u-no-scroll {
