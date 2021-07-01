@@ -8,7 +8,6 @@
 
   &::before {
     content: attr(data-en);
-    // font-family: Bellota;
     font-family: 'Bellota', cursive;
     position: absolute;
     transform: rotate(-5deg);
@@ -17,7 +16,6 @@
     color: rgba(52, 131, 225, 0.3);
     font-size: 80px;
     font-weight: 400;
-    font-family: luxus-brut, cursive;
     font-style: italic;
   }
 }
