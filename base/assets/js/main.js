@@ -45,14 +45,6 @@ const addHeaderStyle = () => {
   $window.on('scroll', toggleClass);
 }
 
-const changeSkillPanel = () => {
-  const active = $('is-active');
-  const $skillTab = $('.c-tab__item');
-  $skillTab.on('click', function() {
-    this.toggleClass(active)
-  })
-}
-
 const changeBurgerMenu = () => {
   const $body = $('body'); //スクロール防止
   const $header = $('.l-header');
@@ -72,6 +64,34 @@ const changeBurgerMenu = () => {
   })
   $navItem.on('click', clickCloseNavMenu);
 }
+
+const changeSkillPanel = () => {
+  const $tabDataFilter = $('#tab [data-filter]');
+  const $skillIconCategory = $('#icons [data-category]');
+
+  $tabDataFilter.on('click', function(e) {
+    e.preventDefault();
+    const $this = $(this);
+    $tabDataFilter.removeClass('is-active');
+    $this.addClass('is-active');
+
+    const $activeTabHaveDataFilter = $this.attr('data-filter');
+
+    if ($activeTabHaveDataFilter == 'all') {
+      $skillIconCategory.removeClass('is-animated')
+      .fadeOut().promise().done(function() {
+        $skillIconCategory.addClass('is-animated').fadeIn();
+      });
+    } else {
+      $skillIconCategory.removeClass('is-animated')
+      .fadeOut().promise().done(function() {
+        $skillIconCategory.filter('[data-category = "'+ $activeTabHaveDataFilter +'"]')
+        .addClass('is-animated').fadeIn();
+      })
+    }
+  });
+}
+
 
 const initPlugins = () => {
   initVivus()

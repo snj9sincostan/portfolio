@@ -1,0 +1,9 @@
+.c-secondaryHeading {
+  font-size: 3.2rem;
+  color: $color_black;
+
+  &::before {
+    content: attr(data-en);
+    font-family: Bellota;
+  }
+}

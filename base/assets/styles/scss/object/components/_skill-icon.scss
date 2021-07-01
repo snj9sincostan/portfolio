@@ -1,25 +1,3 @@
 .c-skillicon {
   width: 128px;
 }
-
-.c-tab {
-  display: flex;
-  list-style: none;
-  width: 100%;
-  width: 300px;
-  padding: 0;
-  margin: 0 auto;
-  &__item {
-    border-radius: 9999px;
-    cursor: pointer;
-    font-size: 2.6rem;
-    &:nth-of-type(n + 2) {
-      margin-left: 15px;
-    }
-    &.is-active {
-      background-color: $button_color;
-      color: $color_white;
-      padding: 0 20px;
-    }
-  }
-}

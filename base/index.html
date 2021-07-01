@@ -4,13 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shinji Nishihara | ポートフォリオ</title>
-  <link rel="stylesheet" href="assets/styles/sanitize.css">
   <link rel="stylesheet" href="assets/styles/style.css">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
   <header class="l-header">
@@ -142,40 +137,40 @@
     <section class="p-home-skill" id="skill">
       <h2 class="c-heading">Skill</h2>
       <div class="p-home-skill__body">
-        <ul class="c-tab">
-          <li class="c-tab__item is-active"><a>All</a></li>
-          <li class="c-tab__item">Language</li>
-          <li class="c-tab__item">Tools</li>
+        <ul class="c-tab" id="tab">
+          <li class="c-tab__item is-active" data-filter="all">All</li>
+          <li class="c-tab__item" data-filter="language">Language</li>
+          <li class="c-tab__item" data-filter="tools">Tools</li>
         </ul>
-        <div class="p-home-skill__icons">
-          <p class="c-skillicon">
+        <div class="p-home-skill__list" id="icons">
+          <p class="c-skillicon p-home-skill__icon" data-category="language">
             <img src="/assets/images/html5.svg" alt="HTML5" class="c-skillicon__image">
           </p>
-          <p class="c-skillicon">
+          <p class="c-skillicon p-home-skill__icon" data-category="language">
             <img src="/assets/images/css3.svg" alt="CSS3" class="c-skillicon__image">
           </p>
-          <p class="c-skillicon">
+          <p class="c-skillicon p-home-skill__icon" data-category="language">
             <img src="/assets/images/javascript.svg" alt="JavaScript" class="c-skillicon__image">
           </p>
-          <p class="c-skillicon">
+          <p class="c-skillicon p-home-skill__icon" data-category="language">
             <img src="/assets/images/sass.svg" alt="Sass" class="c-skillicon__image">
           </p>
-          <p class="c-skillicon">
+          <p class="c-skillicon p-home-skill__icon" data-category="language">
             <img src="/assets/images/jquery.svg" alt="jQuery" class="c-skillicon__image">
           </p>
-          <p class="c-skillicon">
+          <p class="c-skillicon p-home-skill__icon" data-category="tools">
             <img src="/assets/images/git.svg" alt="Git" class="c-skillicon__image">
           </p>
-          <p class="c-skillicon">
+          <p class="c-skillicon p-home-skill__icon" data-category="tools">
             <img src="/assets/images/github.svg" alt="GitHub" class="c-skillicon__image">
           </p>
-          <p class="c-skillicon">
+          <p class="c-skillicon p-home-skill__icon" data-category="tools">
             <img src="/assets/images/wordpress.svg" alt="WordPress" class="c-skillicon__image">
           </p>
-          <p class="c-skillicon">
+          <p class="c-skillicon p-home-skill__icon" data-category="tools">
             <img src="/assets/images/babel.svg" alt="BABEL" class="c-skillicon__image">
           </p>
-          <p class="c-skillicon">
+          <p class="c-skillicon p-home-skill__icon" data-category="tools">
             <img src="/assets/images/gulp.svg" alt="Gulp" class="c-skillicon__image">
           </p>
         </div>

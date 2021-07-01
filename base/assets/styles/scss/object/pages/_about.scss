@@ -31,13 +31,12 @@
   &__description {
     width: 100%;
     max-width: 635px;
-    // height: 182px;
     font-size: 18px;
     margin-top: 15px;
+    line-height: 1.8;
   }
   &__icon {
     width: 250px;
-    height: 250px;
     img {
       display: block;
       border-radius: 9999px;
@@ -54,7 +53,6 @@
 
     &__body {
       max-width: 635px;
-      // padding: 0 20px;
       margin: 0 auto;
     }
 
@@ -64,10 +62,11 @@
     }
 
     &__description {
-      margin: 0 auto;
+      margin: 15px auto 0;
     }
     &__icon {
       margin: 20px auto 0;
+      width: 200px;
     }
   }
 }
