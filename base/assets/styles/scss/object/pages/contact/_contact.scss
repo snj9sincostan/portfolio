@@ -1,0 +1,39 @@
+.p-contact-text {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-top: 30px;
+}
+
+.p-contact-form {
+  max-width: 680px;
+  margin: 80px auto 0;
+
+  &__items {
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+  &__title {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  &__input-wrap {
+    margin: 0;
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+    input,textarea {
+      width: 100%;
+      background-color: #eee;
+      border: none;
+      border-radius: 2px;
+    }
+    input {
+      height: 38px;
+    }
+    textarea {
+      resize: none;
+      height: 420px;
+    }
+  }
+}

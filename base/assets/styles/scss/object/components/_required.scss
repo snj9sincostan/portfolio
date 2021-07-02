@@ -1,0 +1,9 @@
+.c-required {
+  color: $color_white;
+  background-color: $required_color;
+  display: inline-block;
+  text-align: center;
+  border-radius: 9999px;
+  width: 56px;
+  margin-left: 15px;
+}
