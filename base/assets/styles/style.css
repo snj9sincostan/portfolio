@@ -547,7 +547,8 @@ h1, h2, h3, h4, h5, p {
 }
 .p-home-firstview__hero-item {
   height: 180px;
-  min-width: 695px;
+  max-width: 695px;
+  width: 100%;
   position: absolute;
   top: 0;
   right: 0;
@@ -555,20 +556,34 @@ h1, h2, h3, h4, h5, p {
   left: 0;
   margin: auto;
 }
-.p-home-firstview #catchcopy {
+.p-home-firstview #catchcopy-pc {
   width: 100%;
   max-width: 695px;
   margin: 0 auto;
 }
-.p-home-firstview #catchcopy .st0 {
-  display: block;
-  width: 50px;
+.p-home-firstview #catchcopy-sp {
+  display: none;
 }
 
+@media screen and (min-width: 769px) {
+  .p-home-firstview #catchcopy-sp {
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
-  #catchcopy {
+  .p-home-firstview__inner {
+    stroke-width: 2.5;
+  }
+  .p-home-firstview__hero-item {
     width: 300px;
-    height: 82px;
+  }
+  .p-home-firstview #catchcopy-pc {
+    display: none;
+  }
+  .p-home-firstview #catchcopy-sp {
+    display: block;
+    width: 100%;
+    max-width: 300px;
   }
 }
 .p-home-about {
@@ -677,27 +692,28 @@ h1, h2, h3, h4, h5, p {
   width: calc(20% - 40px);
   margin-bottom: 80px;
 }
-.p-home-skill__icon:not(:nth-of-type(5n + 1)) {
-  margin-left: 50px;
-}
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 841px) {
+  .p-home-skill__icon:not(:nth-of-type(5n + 1)) {
+    margin-left: 50px;
+  }
+}
+@media screen and (max-width: 840px) {
   .p-home-skill__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 0 20px;
+  }
+  .p-home-skill__list::after {
+    content: "";
+    display: block;
+    width: 30%;
   }
   .p-home-skill__icon {
     width: calc(50% - 40px);
-    margin: 0 auto;
-  }
-  .p-home-skill__icon:not(:nth-of-type(5n + 1)) {
-    margin-left: auto;
   }
   .p-home-skill__icon:nth-of-type(n + 3) {
     margin-top: 40px;
-  }
-  .p-home-skill__icon:nth-child(2n) {
-    margin-left: auto;
   }
 }
 .p-home-contact {
@@ -839,6 +855,10 @@ h1, h2, h3, h4, h5, p {
 .c-skillicon {
   min-width: 128px;
 }
+.c-skillicon__image {
+  width: 100%;
+}
+
 @keyframes rotate-right {
   0% {
     transform: translate(-100%) rotate(-100deg);

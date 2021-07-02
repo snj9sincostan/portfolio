@@ -22,7 +22,8 @@
     height: 100vh;
     &-item {
       height: 180px;
-      min-width: 695px;
+      max-width: 695px;
+      width: 100%;
       position: absolute;
       top: 0;
       right: 0;
@@ -31,20 +32,40 @@
       margin: auto;
     }
   }
-  #catchcopy {
+  #catchcopy-pc {
     width: 100%;
     max-width: 695px;
     margin: 0 auto;
-    .st0 {
-      display: block;
-      width: 50px;
-    }
+  }
+  #catchcopy-sp {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .p-home-firstview #catchcopy-sp {
+    display: none;
   }
 }
 
 @media screen and (max-width: 768px) {
-  #catchcopy {
-    width: 300px;
-    height: 82px;
+  .p-home-firstview {
+    &__inner {
+      stroke-width:2.5;
+    }
+    &__hero {
+      &-item {
+        width: 300px;
+        // background-color: #fff;
+      }
+    }
+    #catchcopy-pc {
+      display: none;
+    }
+    #catchcopy-sp {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+    }
   }
 }

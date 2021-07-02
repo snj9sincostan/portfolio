@@ -15,29 +15,32 @@
   &__icon {
     width: calc(20% - 40px);
     margin-bottom: 80px;
-    &:not(:nth-of-type(5n + 1)) {
+  }
+}
+@media screen and (min-width: 841px) {
+  .p-home-skill {
+    &__icon:not(:nth-of-type(5n + 1)) {
       margin-left: 50px;
     }
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 840px) {
   .p-home-skill {
-
     &__list {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
+      // justify-content: space-between;
+      padding: 0 20px;
+      &::after{
+        content:"";
+        display: block;
+        width:30%;
+      }
     }
     &__icon {
       width: calc(50% - 40px);
-      margin: 0 auto;
-      &:not(:nth-of-type(5n + 1)) {
-        margin-left: auto;
-      }
       &:nth-of-type(n + 3) {
         margin-top: 40px;
-      }
-      &:nth-child(2n) {
-        margin-left: auto;
       }
     }
   }

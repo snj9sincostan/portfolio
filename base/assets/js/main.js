@@ -7,7 +7,17 @@ jQuery(document).ready(function () {
       animTimingFunction: Vivus.EASE
     }
 
-    new Vivus('catchcopy', vivusProperty)
+    const screenWidth = {
+      primary: matchMedia('(min-width: 769px)'),
+      secondary: matchMedia('(max-width: 768px)')
+    }
+    // console.log(screenWidth.primary)
+    // console.log(screenWidth.secondary)
+    // if (screenWidth.primary) {
+    // } else if (screenWidth.secondary) {
+    // }
+    new Vivus('catchcopy-pc', vivusProperty)
+    new Vivus('catchcopy-sp', vivusProperty)
   }
 
   const smoothScroll = () => {
@@ -117,7 +127,7 @@ jQuery(document).ready(function () {
   }
 
   const init = () => {
-    // startPlugins()
+    startPlugins()
     changeBurgerMenu();
     changeSkillPanel();
     smoothScroll();
