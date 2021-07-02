@@ -1,15 +1,4 @@
 jQuery(document).ready(function () {
-  const initVivus = () => {
-    const vivusProperty =  {
-      type: 'scenario-sync',
-      duration: 8,
-      forceRender: false ,
-      animTimingFunction: Vivus.EASE
-    }
-
-    new Vivus('catchcopy-pc', vivusProperty)
-    new Vivus('catchcopy-sp', vivusProperty)
-  }
 
   const smoothScroll = () => {
     const speed = 700;
@@ -39,7 +28,7 @@ jQuery(document).ready(function () {
       const value = $window.scrollTop();
       if ($firstViewHeight - headerHeight <= value) {
         $header.addClass(fixed);
-      } else {
+      } else if ($firstViewHeight - headerHeight >= value) {
         $header.removeClass(fixed);
       }
     }
@@ -118,7 +107,7 @@ jQuery(document).ready(function () {
   }
 
   const init = () => {
-    startPlugins()
+    // startPlugins()
     changeBurgerMenu();
     changeSkillPanel();
     smoothScroll();

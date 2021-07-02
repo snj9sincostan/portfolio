@@ -47,6 +47,16 @@
       transition: all 0.3s;
     }
   }
+  &.is-sticky {
+    position: sticky;
+    color: $color_black;
+    background-color: $color_white;
+    transition: all 0.3s;
+    .l-header__burger-line {
+      background-color: $color_black;
+      transition: all 0.3s;
+    }
+  }
   &.is-active {
     .l-header__logo {
       color: #000;

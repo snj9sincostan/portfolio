@@ -438,6 +438,16 @@ h1, h2, h3, h4, h5, p {
   background-color: #000000;
   transition: all 0.3s;
 }
+.l-header.is-sticky {
+  position: sticky;
+  color: #000000;
+  background-color: #ffffff;
+  transition: all 0.3s;
+}
+.l-header.is-sticky .l-header__burger-line {
+  background-color: #000000;
+  transition: all 0.3s;
+}
 .l-header.is-active .l-header__logo {
   color: #000;
 }
@@ -886,22 +896,29 @@ h1, h2, h3, h4, h5, p {
   color: #000000;
   position: relative;
   padding-top: 50px;
-  padding-left: 30px;
-  font-size: 26px;
 }
 .c-secondaryHeading::before {
   content: attr(data-en);
   position: absolute;
   transform: rotate(-5deg);
   top: -20px;
-  left: 0;
+  left: -20px;
   color: rgba(52, 131, 225, 0.3);
-  font-size: 80px;
+  font-size: 8rem;
   font-weight: 400;
   font-family: luxus-brut, cursive;
   font-style: italic;
 }
 
+@media screen and (max-width: 500px) {
+  .c-secondaryHeading {
+    font-size: 2.6rem;
+  }
+  .c-secondaryHeading::before {
+    font-size: 6rem;
+    top: 5px;
+  }
+}
 .u-no-scroll {
   overflow: hidden;
 }
