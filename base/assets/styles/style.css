@@ -537,9 +537,7 @@ h1, h2, h3, h4, h5, p {
   stroke-linejoin: round;
   stroke-miterlimit: 0;
   stroke-dasharray: 1500;
-  /* この行を追加 */
   stroke-dashoffset: 1500;
-  /* この行を追加 */
 }
 .p-home-firstview__hero {
   position: relative;

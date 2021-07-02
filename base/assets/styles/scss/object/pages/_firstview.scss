@@ -14,8 +14,8 @@
     stroke-linecap:round;
     stroke-linejoin:round;
     stroke-miterlimit:0;
-    stroke-dasharray: 1500; /* この行を追加 */
-    stroke-dashoffset:1500; /* この行を追加 */
+    stroke-dasharray: 1500;
+    stroke-dashoffset:1500;
   }
   &__hero {
     position: relative;
@@ -56,7 +56,6 @@
     &__hero {
       &-item {
         width: 300px;
-        // background-color: #fff;
       }
     }
     #catchcopy-pc {
