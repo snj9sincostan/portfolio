@@ -26,11 +26,6 @@
     }
   }
 
-  &__nav {
-    max-width: 375px;
-    width: 100%;
-  }
-
   &__list {
     display: flex;
     justify-content: space-between;
@@ -63,14 +58,20 @@
   }
 }
 
+@media screen and (min-width: 769px) {
+  .l-header__nav {
+    width: 375px;
+  }
+}
 @media screen and (max-width: 768px){
   .l-header {
     &__nav {
       display: none;
+      max-width: 375px;
 
       &.is-show {
-        background-color: $color_white;
         color: $color_black;
+        background-color: #fff;
         display: block;
       }
     }
@@ -121,6 +122,15 @@
           }
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .l-header {
+    &__logo {
+      width: 150px;
+      height: 40px;
     }
   }
 }

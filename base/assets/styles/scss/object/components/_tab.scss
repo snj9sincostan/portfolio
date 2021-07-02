@@ -4,7 +4,7 @@
   list-style: none;
   width: 100%;
   max-width: 500px;
-  padding: 0;
+  padding: 0 10px;
   margin: 0 auto;
   &__item {
     border-radius: 9999px;
@@ -27,15 +27,16 @@
   }
 }
 
-@keyframes rotate-right {
-  0% {
-    transform: translate(-100%) rotate(-100deg);
-  }
-  100% {
-    transform: none;
-  }
-}
-
 .is-animated {
   animation: .6s rotate-right;
+}
+
+@media screen and (max-width: 500px) {
+  .c-tab {
+    &__item {
+      font-size: 1.6rem;
+      width: 90px;
+      height: 25px;
+    }
+  }
 }
