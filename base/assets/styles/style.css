@@ -801,7 +801,7 @@ h1, h2, h3, h4, h5, p {
 }
 .p-contact-form__input-wrap input, .p-contact-form__input-wrap textarea {
   width: 100%;
-  background-color: #eee;
+  background-color: #eeeeee;
   border: none;
   border-radius: 2px;
 }
@@ -962,7 +962,7 @@ h1, h2, h3, h4, h5, p {
   background-color: #18a0fb;
   border-radius: 9999px;
   border: none;
-  padding: 5px 20px;
+  padding: 5px 0px;
   font-size: 1.6rem;
   cursor: pointer;
 }

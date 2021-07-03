@@ -15,7 +15,6 @@ jQuery(document).ready(function () {
       $("html, body").animate({ scrollTop: position }, speed, "swing");
     });
   }
-// const a = $('#catchcopy')
   const addHeaderStyle = () => {
     const $window = $(window)
     const $header = $('.l-header');
@@ -37,7 +36,7 @@ jQuery(document).ready(function () {
   }
 
   const changeBurgerMenu = () => {
-    const $body = $('body'); //スクロール防止
+    const $body = $('body');
     const $header = $('.l-header');
     const $burgerIcon = $('.l-header__burger');
     const $headerNav = $('.l-header__nav');

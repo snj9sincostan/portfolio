@@ -21,7 +21,6 @@
     &:hover {
       background-color: $button_color;
       color: $color_white;
-      // transform: all 0.3s;
       transition: background-color 0.3s, color 0.3s;
     }
   }
