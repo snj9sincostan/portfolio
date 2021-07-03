@@ -1,0 +1,14 @@
+.c-fix {
+  width: 250px;
+  text-align: center;
+  &__button {
+    margin: 0 auto;
+    font-size: 1.8rem;
+    text-decoration: underline;
+    color: rgba(0, 0, 0, 0.7);
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

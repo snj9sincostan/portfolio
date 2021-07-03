@@ -1,0 +1,15 @@
+.c-skillicon {
+  min-width: 128px;
+  &__image {
+    width: 100%;
+  }
+}
+
+@keyframes rotate-right {
+  0% {
+    transform: translate(-100%) rotate(-100deg);
+  }
+  100% {
+    transform: none;
+  }
+}

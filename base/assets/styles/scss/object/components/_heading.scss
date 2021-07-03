@@ -1,0 +1,9 @@
+.c-heading {
+  font-size: 3.6rem;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .c-heading {
+    font-size: 2.8rem;
+  }
+}
