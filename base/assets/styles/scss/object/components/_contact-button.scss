@@ -1,49 +1,48 @@
-$btn-width: 250px !default;
-$btn-height: 80px !default;
-$btn-full: $btn-height+$btn-width !default;
-$btn-half: $btn-full/2 !default;
-$bg-color: #eeeeee !default;
-
-[class^="btn-"] {
+.btn-6 {
   position: relative;
   display: block;
   overflow: hidden;
   width: 100%;  // @include size(100%, $btn-height);
-  max-width: $btn-width;
+  // height: 80px;
+  max-width: 250px;
   margin: 1rem auto;
   text-transform: uppercase;
-  border: 1px solid currentColor;
-}
+  // border: 1px solid currentColor;
+  border: 1px solid #0276b5;
 
-.btn-6 {
-  color: #b8544e;
+  color: #0276b5;
   // $btn-color: random-color($max:200);
   // $btn-color-dark: shade($btn-color, 40%);
 	// color: tint($btn-color);
-  
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 0;
   span {
     position: absolute;  // @include absolute();
     display: block;
     width: 0;  // @include size(0);
     height: 0; // @include size(0);
     border-radius: 50%;
-    background-color: #67201c;  // background-color: $btn-color-dark;
+    background-color: #0276b5;  // background-color: $btn-color-dark;
     transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
     transform: translate(-50%, -50%);
     z-index: -1;
   }
-  
+
   &:hover {
-    color: #eacdcb;
+    color: $color_white;
     // color: tint($btn-color, 75%);
-    
+
     span {
-      width: 225px;  // @include size(225%, $btn-width*2.25);
-      height: 562.5em;  // @include size(225%, $btn-width*2.25);
+      color: #0276b5;
+      width: 500px;  // @include size(225%, $btn-width*2.25);
+      // width: 225px;  // @include size(225%, $btn-width*2.25);
+      // height: 562.5px;  // @include size(225%, $btn-width*2.25);
+      height: 500px;  // @include size(225%, $btn-width*2.25);
     }
   }
-  
+
   &:active {
-    background-color: #b8544e;
+    background-color: #0276b5;
   }
 }

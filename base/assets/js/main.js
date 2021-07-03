@@ -15,7 +15,7 @@ jQuery(document).ready(function () {
       $("html, body").animate({ scrollTop: position }, speed, "swing");
     });
   }
-
+// const a = $('#catchcopy')
   const addHeaderStyle = () => {
     const $window = $(window)
     const $header = $('.l-header');
