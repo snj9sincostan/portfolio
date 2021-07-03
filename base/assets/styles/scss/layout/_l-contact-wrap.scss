@@ -3,3 +3,9 @@
   margin: 0 auto;
   padding: 50px 20px 85px;
 }
+
+@media screen and (max-width: 500px) {
+  .l-contact-wrap {
+    padding-bottom: 45px;
+  }
+}

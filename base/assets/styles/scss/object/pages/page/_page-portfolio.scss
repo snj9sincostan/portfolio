@@ -25,3 +25,11 @@
     display: block;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .p-page-portfolio {
+    &__text {
+      font-size: 1.8rem;
+    }
+  }
+}

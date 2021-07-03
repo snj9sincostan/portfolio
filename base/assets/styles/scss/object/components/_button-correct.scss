@@ -1,11 +1,13 @@
 .c-correct {
+  // width: 250px;
   &__button {
     margin: 0 auto;
     position: relative;
     display: block;
     overflow: hidden;
-    width: 100%;
-    max-width: 250px;
+    // width: 100%;
+    // max-width: 250px;
+    width: 250px;
     margin: 0 auto;
     text-transform: uppercase;
     border: 1px solid $button_correct;

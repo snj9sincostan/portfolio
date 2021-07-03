@@ -536,6 +536,11 @@ h1, h2, h3, h4, h5, p {
   padding: 50px 20px 85px;
 }
 
+@media screen and (max-width: 500px) {
+  .l-contact-wrap {
+    padding-bottom: 45px;
+  }
+}
 .p-home-firstview {
   background-image: url(/assets/images/Hero.png);
   background-size: cover;
@@ -763,6 +768,11 @@ h1, h2, h3, h4, h5, p {
   display: block;
 }
 
+@media screen and (max-width: 500px) {
+  .p-page-portfolio__text {
+    font-size: 1.8rem;
+  }
+}
 .p-contact-text {
   text-align: center;
   font-size: 1.6rem;
@@ -805,12 +815,29 @@ h1, h2, h3, h4, h5, p {
 }
 
 .p-contact-button {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
   margin-top: 40px;
 }
 
 @media screen and (max-width: 500px) {
+  .p-contact-form__items:not(:first-child) {
+    margin-top: 10px;
+  }
+  .p-contact-form__input-wrap:not(:first-child) {
+    margin-top: 10px;
+  }
   .p-contact-form__input-wrap textarea {
     height: 315px;
+  }
+
+  .p-contact-button {
+    display: block;
+    margin-top: 60px;
+  }
+  .p-contact-button__fix {
+    margin: 20px auto 0;
   }
 }
 .c-heading {
@@ -942,6 +969,7 @@ h1, h2, h3, h4, h5, p {
 .c-primarybutton a {
   text-decoration: none;
   color: #ffffff;
+  display: block;
 }
 .c-primarybutton:hover {
   opacity: 0.8;
@@ -968,10 +996,10 @@ h1, h2, h3, h4, h5, p {
 
 @media screen and (max-width: 500px) {
   .c-secondaryHeading {
-    font-size: 2.6rem;
+    font-size: 2.2rem;
   }
   .c-secondaryHeading::before {
-    font-size: 6rem;
+    font-size: 5.5rem;
     top: 5px;
   }
 }
@@ -990,8 +1018,7 @@ h1, h2, h3, h4, h5, p {
   position: relative;
   display: block;
   overflow: hidden;
-  width: 100%;
-  max-width: 250px;
+  width: 250px;
   margin: 0 auto;
   text-transform: uppercase;
   border: 1px solid #0276b5;
@@ -1022,6 +1049,20 @@ h1, h2, h3, h4, h5, p {
   background-color: #0276b5;
 }
 
+.c-fix {
+  width: 250px;
+  text-align: center;
+}
+.c-fix__button {
+  margin: 0 auto;
+  font-size: 1.8rem;
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.7);
+}
+.c-fix__button:hover {
+  opacity: 0.8;
+}
+
 .u-no-scroll {
   overflow: hidden;
 }
@@ -1042,6 +1083,10 @@ h1, h2, h3, h4, h5, p {
 
 .is-invisible {
   visibility: hidden;
+}
+
+.u-fz-16 {
+  font-size: 1.6rem;
 }
 
 /*# sourceMappingURL=style.css.map */

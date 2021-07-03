@@ -41,13 +41,33 @@
 }
 
 .p-contact-button {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
   margin-top: 40px;
 }
 
 @media screen and (max-width: 500px) {
-  .p-contact-form__input-wrap {
-    textarea {
-      height: 315px;
+  .p-contact-form {
+
+    &__items:not(:first-child) {
+      margin-top: 10px;
+    }
+
+    &__input-wrap {
+      &:not(:first-child) {
+        margin-top: 10px;
+      }
+      textarea {
+        height: 315px;
+      }
+    }
+  }
+  .p-contact-button {
+    display: block;
+    margin-top: 60px;
+    &__fix {
+      margin: 20px auto 0;
     }
   }
 }
