@@ -102,12 +102,7 @@ jQuery(document).ready(function () {
     });
   }
 
-  const startPlugins = () => {
-    initVivus()
-  }
-
   const init = () => {
-    // startPlugins()
     changeBurgerMenu();
     changeSkillPanel();
     smoothScroll();
