@@ -117,20 +117,17 @@ jQuery(document).ready(function () {
   init();
 
   function a() {
-    $('.btn-6')
-      .on('mouseenter', function(e) {
-        var parentOffset = $(this).offset(),
-            relX = e.pageX - parentOffset.left,
-            relY = e.pageY - parentOffset.top;
-        $(this).find('span').css({top:relY, left:relX})
-      })
-      .on('mouseout', function(e) {
-        var parentOffset = $(this).offset(),
-            relX = e.pageX - parentOffset.left,
-            relY = e.pageY - parentOffset.top;
-        $(this).find('span').css({top:relY, left:relX})
-      });
-    $('.btn-6').click(function(){return false});
+    const $correctButton = $('.c-correct__button');
+    function s(e) {
+      const parentOffset = $(this).offset(),
+          relX = e.pageX - parentOffset.left,
+          relY = e.pageY - parentOffset.top;
+      $(this).find('span').css({top:relY, left:relX})
+      console.log($(this).offset)
+    }
+      $correctButton.on('mouseenter', s)
+      $correctButton.on('mouseout', s);
+    // $('c-correct__button').click(function(){return false});
     // $('[href=#]').click(function(){return false});
   }
   a()

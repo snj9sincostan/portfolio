@@ -972,21 +972,21 @@ h1, h2, h3, h4, h5, p {
   margin-left: 15px;
 }
 
-.btn-6 {
+.c-correct__button {
+  margin: 0 auto;
   position: relative;
   display: block;
   overflow: hidden;
   width: 100%;
   max-width: 250px;
-  margin: 1rem auto;
+  margin: 0 auto;
   text-transform: uppercase;
   border: 1px solid #0276b5;
   color: #0276b5;
   font-size: 1.8rem;
   text-align: center;
-  margin: 0;
 }
-.btn-6 span {
+.c-correct__button span {
   position: absolute;
   display: block;
   width: 0;
@@ -997,15 +997,15 @@ h1, h2, h3, h4, h5, p {
   transform: translate(-50%, -50%);
   z-index: -1;
 }
-.btn-6:hover {
+.c-correct__button:hover {
   color: #ffffff;
 }
-.btn-6:hover span {
+.c-correct__button:hover span {
   color: #0276b5;
   width: 500px;
   height: 500px;
 }
-.btn-6:active {
+.c-correct__button:active {
   background-color: #0276b5;
 }
 

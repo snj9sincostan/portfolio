@@ -1,48 +1,39 @@
-.btn-6 {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  width: 100%;  // @include size(100%, $btn-height);
-  // height: 80px;
-  max-width: 250px;
-  margin: 1rem auto;
-  text-transform: uppercase;
-  // border: 1px solid currentColor;
-  border: 1px solid #0276b5;
-
-  color: #0276b5;
-  // $btn-color: random-color($max:200);
-  // $btn-color-dark: shade($btn-color, 40%);
-	// color: tint($btn-color);
-  font-size: 1.8rem;
-  text-align: center;
-  margin: 0;
-  span {
-    position: absolute;  // @include absolute();
+.c-correct {
+  &__button {
+    margin: 0 auto;
+    position: relative;
     display: block;
-    width: 0;  // @include size(0);
-    height: 0; // @include size(0);
-    border-radius: 50%;
-    background-color: #0276b5;  // background-color: $btn-color-dark;
-    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-  }
-
-  &:hover {
-    color: $color_white;
-    // color: tint($btn-color, 75%);
-
+    overflow: hidden;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    border: 1px solid $button_correct;
+    color: $button_correct;
+    font-size: 1.8rem;
+    text-align: center;
     span {
-      color: #0276b5;
-      width: 500px;  // @include size(225%, $btn-width*2.25);
-      // width: 225px;  // @include size(225%, $btn-width*2.25);
-      // height: 562.5px;  // @include size(225%, $btn-width*2.25);
-      height: 500px;  // @include size(225%, $btn-width*2.25);
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background-color: $button_correct;
+      transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+      transform: translate(-50%, -50%);
+      z-index: -1;
     }
-  }
 
-  &:active {
-    background-color: #0276b5;
+    &:hover {
+      color: $color_white;
+      span {
+        color: $button_correct;
+        width: 500px;
+        height: 500px;
+      }
+    }
+    &:active {
+      background-color: $button_correct;
+    }
   }
 }
