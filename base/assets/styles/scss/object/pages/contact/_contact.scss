@@ -9,6 +9,7 @@
   margin: 80px auto 0;
 
   &__items {
+    margin-bottom: 0;
     &:not(:first-child) {
       margin-top: 20px;
     }
@@ -34,6 +35,19 @@
     textarea {
       resize: none;
       height: 420px;
+      padding: 0;
+    }
+  }
+}
+
+.p-contact-button {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 500px) {
+  .p-contact-form__input-wrap {
+    textarea {
+      height: 315px;
     }
   }
 }

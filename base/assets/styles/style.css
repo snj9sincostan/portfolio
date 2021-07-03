@@ -773,6 +773,9 @@ h1, h2, h3, h4, h5, p {
   max-width: 680px;
   margin: 80px auto 0;
 }
+.p-contact-form__items {
+  margin-bottom: 0;
+}
 .p-contact-form__items:not(:first-child) {
   margin-top: 20px;
 }
@@ -798,8 +801,18 @@ h1, h2, h3, h4, h5, p {
 .p-contact-form__input-wrap textarea {
   resize: none;
   height: 420px;
+  padding: 0;
 }
 
+.p-contact-button {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 500px) {
+  .p-contact-form__input-wrap textarea {
+    height: 315px;
+  }
+}
 .c-heading {
   font-size: 3.6rem;
   text-align: center;
