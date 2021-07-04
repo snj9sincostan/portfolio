@@ -1,0 +1,38 @@
+.c-correct {
+  &__button {
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 250px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    border: 1px solid $button_correct;
+    color: $button_correct;
+    font-size: 1.8rem;
+    text-align: center;
+    span {
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background-color: $button_correct;
+      transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+
+    &:hover {
+      color: $color_white;
+      span {
+        color: $button_correct;
+        width: 500px;
+        height: 500px;
+      }
+    }
+    &:active {
+      background-color: $button_correct;
+    }
+  }
+}

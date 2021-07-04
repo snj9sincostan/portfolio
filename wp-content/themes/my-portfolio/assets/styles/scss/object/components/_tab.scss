@@ -1,0 +1,41 @@
+.c-tab {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 100%;
+  max-width: 500px;
+  padding: 0 10px;
+  margin: 0 auto;
+  &__item {
+    border-radius: 9999px;
+    cursor: pointer;
+    font-size: 2.6rem;
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    font-weight: bold;
+    &.is-active {
+      background-color: $button_color;
+      color: $color_white;
+    }
+    &:hover {
+      background-color: $button_color;
+      color: $color_white;
+      transition: background-color 0.3s, color 0.3s;
+    }
+  }
+}
+
+.is-animated {
+  animation: .6s rotate-right;
+}
+
+@media screen and (max-width: 500px) {
+  .c-tab {
+    &__item {
+      font-size: 1.6rem;
+      width: 90px;
+      height: 25px;
+    }
+  }
+}

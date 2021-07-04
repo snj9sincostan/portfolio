@@ -1,0 +1,146 @@
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  color: $color_white;
+  transition: all 0.3s;
+
+  &__inner {
+    max-width: 1280px;
+    height: 70px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 250px;
+    height: 40px;
+    margin: 0;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    font-size: 1.6rem;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &.is-fixed {
+    color: $color_black;
+    background-color: $color_white;
+    transition: all 0.3s;
+    .l-header__burger-line {
+      background-color: $color_black;
+      transition: all 0.3s;
+    }
+  }
+  &.is-sticky {
+    position: sticky;
+    color: $color_black;
+    background-color: $color_white;
+    transition: all 0.3s;
+    .l-header__burger-line {
+      background-color: $color_black;
+      transition: all 0.3s;
+    }
+  }
+  &.is-active {
+    .l-header__logo {
+      color: #000;
+    }
+  }
+
+  &__burger {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .l-header__nav {
+    width: 375px;
+  }
+}
+@media screen and (max-width: 768px){
+  .l-header {
+    &__nav {
+      display: none;
+      max-width: 375px;
+
+      &.is-show {
+        color: $color_black;
+        background-color: #fff;
+        display: block;
+      }
+    }
+    .is-show & {
+      &__list {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: $color_white;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding-top: 70px;
+        z-index: -1;
+      }
+      &__item {
+        text-align: center;
+        margin-top: 20px;
+      }
+    }
+
+    &__burger {
+      background-color: transparent;
+      border: none;
+      display: block;
+      margin-left: auto;
+      &-line {
+        background-color: $color_white;
+        width: 35px;
+        height: 2px;
+        display: block;
+        margin-bottom: 9px;
+        transition: transform 0.3s;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .is-open & {
+          background-color: $color_black;
+          &:nth-child(1) {
+            transform: translateY(11px) rotate(135deg);
+          }
+          &:nth-child(2) {
+            transform: translateX(-18px) scaleX(0);
+          }
+          &:nth-child(3) {
+            transform: translateY(-11px) rotate(-135deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .l-header {
+    &__logo {
+      width: 150px;
+      height: 40px;
+    }
+  }
+}
