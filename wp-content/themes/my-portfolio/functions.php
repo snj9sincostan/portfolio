@@ -1,5 +1,5 @@
 <?php
-function readAssets() {
+function read_assets() {
   wp_enqueue_script(
     'main-js',
     get_template_directory_uri().'/assets/js/main.js',
@@ -18,14 +18,19 @@ function readAssets() {
   }
 }
 
+// function append_style_if_admin_bar() {
+//  if (is_user_logged_in()) {
+//    echo 'u-mt-32';
+//  }
+// }
 
-function registerNav() {
+function register_nav() {
   register_nav_menus(
     array(
     'global-menu' => 'グローバルメニュー'
   ));
 }
-registerNav();
-add_action('wp_enqueue_scripts','readAssets');
+register_nav();
+add_action('wp_enqueue_scripts','read_assets');
 
 ?>
