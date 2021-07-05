@@ -9,7 +9,7 @@
   <?php wp_head(); ?>
 </head>
 <body>
-  <header class="l-header">
+  <header class="l-header <?php append_style_if_not_home();?>">
     <div class="l-header__inner">
       <h1 class="l-header__logo">
         <a href="<?php echo home_url(); ?>">

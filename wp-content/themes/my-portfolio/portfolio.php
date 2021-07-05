@@ -1,3 +1,9 @@
+<?
+/*
+Template Name: portfolio
+*/
+?>
+
 <?php get_header();?>
 <main class="l-main">
   <div class="p-page-portfolio">

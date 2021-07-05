@@ -105,7 +105,7 @@
           テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、
         </p>
         <button class="c-primarybutton p-home-portfolio__button">
-          <a href="page.html">Show more</a>
+          <a href="<?php echo home_url('/portfolio'); ?>">Show more</a>
         </button>
       </article>
       <article class="c-card p-home-portfolio__card animate__animated" animation="animate__fadeInUp">
@@ -117,7 +117,7 @@
           テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、
         </p>
         <button class="c-primarybutton p-home-portfolio__button">
-          <a href="page.html">Show more</a>
+          <a href="<?php echo home_url('/portfolio2'); ?>">Show more</a>
         </button>
       </article>
       <article class="c-card p-home-portfolio__card animate__animated" animation="animate__fadeInUp">
@@ -129,7 +129,7 @@
           テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、
         </p>
         <button class="c-primarybutton p-home-portfolio__button">
-          <a href="page.html">Show more</a>
+          <a href="<?php echo home_url('/portfolio3'); ?>">Show more</a>
         </button>
       </article>
     </div>
@@ -179,7 +179,7 @@
   <section class="p-home-contact" id="contact">
     <h2 class="c-heading">Contact</h2>
     <button class="c-primarybutton p-home-contact__button">
-      <a href="contact.html">Contact</a>
+      <a href="<?php echo home_url('/contact'); ?>">Contact</a>
     </button>
   </section>
 </main>
