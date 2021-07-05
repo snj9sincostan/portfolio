@@ -1,19 +1,27 @@
+// ==========================================================================
+// Foundation
+// ==========================================================================
+
 @import "./scss/foundation/reset";
 @import "./scss/foundation/variables";
 @import "./scss/foundation/base";
+
+// ==========================================================================
+// Layout
+// ==========================================================================
+
 @import "./scss/layout/l-header";
 @import "./scss/layout/l-main";
 @import "./scss/layout/l-footer";
 @import "./scss/layout/l-contact-wrap";
 
-@import "./scss/object/pages/index/firstview";
-@import "./scss/object/pages/index/about";
-@import "./scss/object/pages/index/portfolio";
-@import "./scss/object/pages/index/skill";
-@import "./scss/object/pages/index/contact";
+// ==========================================================================
+// Object
+// ==========================================================================
 
-@import "./scss/object/pages/page/page-portfolio";
-@import "./scss/object/pages/contact/contact";
+// -----------------------------------------------------------------
+// Component
+// -----------------------------------------------------------------
 
 @import "./scss/object/components/heading";
 @import "./scss/object/components/card";
@@ -24,6 +32,22 @@
 @import "./scss/object/components/required";
 @import "./scss/object/components/button-correct";
 @import "./scss/object/components/button-fix";
+
+// -----------------------------------------------------------------
+// Project
+// -----------------------------------------------------------------
+
+@import "./scss/object/project/index/firstview";
+@import "./scss/object/project/index/about";
+@import "./scss/object/project/index/portfolio";
+@import "./scss/object/project/index/skill";
+@import "./scss/object/project/index/contact";
+@import "./scss/object/project/page/page-portfolio";
+@import "./scss/object/project/contact/contact";
+
+// -----------------------------------------------------------------
+// Utility
+// -----------------------------------------------------------------
 
 @import "./scss/object//utility/scroll-lock";
 @import "./scss/object//utility/rolin-override";
