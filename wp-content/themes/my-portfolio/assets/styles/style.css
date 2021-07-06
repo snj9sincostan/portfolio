@@ -714,7 +714,7 @@ h1, h2, h3, h4, h5, p {
   margin-left: 15px;
 }
 
-.c-correct__button {
+.c-correct-button {
   margin: 0 auto;
   display: block;
   width: 250px;
@@ -727,19 +727,17 @@ h1, h2, h3, h4, h5, p {
   padding: 0;
   transition: all 0.4s;
 }
-.c-correct__button:hover {
+.c-correct-button:hover {
   transition: all 0.4s;
   color: #ffffff;
   background-color: #0276b5;
 }
-.c-correct__button:active {
+.c-correct-button:active {
   background-color: #0276b5;
 }
 
-.c-fix {
+.c-fix-button {
   text-align: center;
-}
-.c-fix__button {
   margin: 0 auto;
   font-size: 1.8rem;
   text-decoration: underline;
@@ -751,7 +749,7 @@ h1, h2, h3, h4, h5, p {
   width: 250px;
   padding: 0;
 }
-.c-fix__button:hover {
+.c-fix-button:hover {
   opacity: 0.8;
 }
 

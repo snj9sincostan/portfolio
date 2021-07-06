@@ -1,25 +1,23 @@
-.c-correct {
-  &__button {
-    margin: 0 auto;
-    display: block;
-    width: 250px;
-    border: 1px solid $button_correct;
-    color: $button_correct;
-    font-size: 1.8rem;
-    text-align: center;
-    background-color: transparent;
-    cursor: pointer;
+.c-correct-button {
+  margin: 0 auto;
+  display: block;
+  width: 250px;
+  border: 1px solid $button_correct;
+  color: $button_correct;
+  font-size: 1.8rem;
+  text-align: center;
+  background-color: transparent;
+  cursor: pointer;
 
-    padding: 0;
+  padding: 0;
+  transition: all .4s;
+  &:hover {
     transition: all .4s;
-    &:hover {
-      transition: all .4s;
-      color: $color_white;
-      background-color: $button_correct;
-    }
+    color: $color_white;
+    background-color: $button_correct;
+  }
 
-    &:active {
-      background-color: $button_correct;
-    }
+  &:active {
+    background-color: $button_correct;
   }
 }
