@@ -1,42 +1,19 @@
 jQuery(document).ready(function () {
 
-  const smoothScroll = () => {
-    const $el = $("html, body");
-    const $headerAnchorLink = $('a[href*="#"]');
-    const headerHeight = $('.l-header').outerHeight();
+
+  const smoothScroll = ()=> {
     const speed = 700;
-
-    const scrollWhenTopPage = () => {
-      $headerAnchorLink.on('click', function () {
-        let href = $(this).attr("href");
-        const developmentURL = location.protocol + "//" + location.hostname + ":8888" + location.pathname;
-        const productionURL = location.protocol + "//" + location.hostname + location.pathname;
-        const localURL = "localhost";
-        const URL = location.href.indexOf(localURL) ? developmentURL : productionURL;
-        href = href.replace(URL, "");
-        const target = $(href == "#" || href == "" ? "html" : href);
-        const position = target.offset().top - headerHeight;
-        $el.animate({ scrollTop: position }, speed, "swing");
-      });
-    }
-
-    const scrollAfterPageTransition = () => {
-      let urlHash = location.hash;
-      if(urlHash) {
-        setTimeout(function() {
-          $el.stop().scrollTop(0);
-          const target = $(urlHash);
-          const position = target.offset().top - headerHeight;
-          $el.stop().animate({ scrollTop: position }, speed);
-        }, 300);
-      }
-    }
-
-    scrollWhenTopPage();
-    // if (location.pathname = "/PF/") {
-    // } else {
-    //   scrollAfterPageTransition();
-    // }
+    const headerHeight = $('.l-header').outerHeight();
+    $('a[href*="#"]').click(function(){
+      let href= $(this).attr("href");
+      const developmentUrl = location.protocol + '//' + location.hostname + ':8888' + location.pathname;
+      const productionUrl = location.protocol + '//' + location.hostname + location.pathname;
+      const url = (location.href === 'localhost:8888') ? productionUrl : developmentUrl;
+      href = href.replace(url, '');
+      const target = $(href == "#" || href == "" ? 'html' : href);
+      const position = target.offset().top - headerHeight;
+      $("html, body").animate({scrollTop:position }, speed, "swing");
+    });
   }
 
   const addHeaderStyle = () => {
@@ -131,6 +108,7 @@ jQuery(document).ready(function () {
     smoothScroll();
     addHeaderStyle();
     addAnimationStyle();
+    smoothScroll();
   }
   init();
 });

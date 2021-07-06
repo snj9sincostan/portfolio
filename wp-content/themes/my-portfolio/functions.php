@@ -18,12 +18,6 @@ function read_assets() {
   }
 }
 
-// function append_style_if_admin_bar() {
-//  if (is_user_logged_in()) {
-//    echo 'u-mt-32';
-//  }
-// }
-
 function append_style_if_not_home() {
   if (!is_home()) {
     echo 'is-sticky';
