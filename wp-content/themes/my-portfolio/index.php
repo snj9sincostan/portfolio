@@ -104,7 +104,7 @@
         <p class="c-card__text">
           テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、
         </p>
-        <button class="c-primarybutton p-home-portfolio__button">
+        <button class="c-primary-button p-home-portfolio__button">
           <a href="<?php echo home_url('/portfolio'); ?>">Show more</a>
         </button>
       </article>
@@ -116,7 +116,7 @@
         <p class="c-card__text">
           テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、
         </p>
-        <button class="c-primarybutton p-home-portfolio__button">
+        <button class="c-primary-button p-home-portfolio__button">
           <a href="<?php echo home_url('/portfolio2'); ?>">Show more</a>
         </button>
       </article>
@@ -128,7 +128,7 @@
         <p class="c-card__text">
           テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、
         </p>
-        <button class="c-primarybutton p-home-portfolio__button">
+        <button class="c-primary-button p-home-portfolio__button">
           <a href="<?php echo home_url('/portfolio3'); ?>">Show more</a>
         </button>
       </article>
@@ -143,42 +143,42 @@
         <li class="c-tab__item" data-filter="tools">Tools</li>
       </ul>
       <div class="p-home-skill__list animate__animated" id="icons" animation="animate__fadeInUp">
-        <p class="c-skillicon p-home-skill__icon" data-category="language">
-          <img src="<?php echo get_template_directory_uri();?>/assets/images/html5.svg" alt="HTML5" class="c-skillicon__image">
+        <p class="c-skill-icon p-home-skill__icon" data-category="language">
+          <img src="<?php echo get_template_directory_uri();?>/assets/images/html5.svg" alt="HTML5" class="c-skill-icon__image">
         </p>
-        <p class="c-skillicon p-home-skill__icon" data-category="language">
-          <img src="<?php echo get_template_directory_uri();?>/assets/images/css3.svg" alt="CSS3" class="c-skillicon__image">
+        <p class="c-skill-icon p-home-skill__icon" data-category="language">
+          <img src="<?php echo get_template_directory_uri();?>/assets/images/css3.svg" alt="CSS3" class="c-skill-icon__image">
         </p>
-        <p class="c-skillicon p-home-skill__icon" data-category="language">
-          <img src="<?php echo get_template_directory_uri();?>/assets/images/javascript.svg" alt="JavaScript" class="c-skillicon__image">
+        <p class="c-skill-icon p-home-skill__icon" data-category="language">
+          <img src="<?php echo get_template_directory_uri();?>/assets/images/javascript.svg" alt="JavaScript" class="c-skill-icon__image">
         </p>
-        <p class="c-skillicon p-home-skill__icon" data-category="language">
-          <img src="<?php echo get_template_directory_uri();?>/assets/images/sass.svg" alt="Sass" class="c-skillicon__image">
+        <p class="c-skill-icon p-home-skill__icon" data-category="language">
+          <img src="<?php echo get_template_directory_uri();?>/assets/images/sass.svg" alt="Sass" class="c-skill-icon__image">
         </p>
-        <p class="c-skillicon p-home-skill__icon" data-category="language">
-          <img src="<?php echo get_template_directory_uri();?>/assets/images/jquery.svg" alt="jQuery" class="c-skillicon__image">
+        <p class="c-skill-icon p-home-skill__icon" data-category="language">
+          <img src="<?php echo get_template_directory_uri();?>/assets/images/jquery.svg" alt="jQuery" class="c-skill-icon__image">
         </p>
-        <p class="c-skillicon p-home-skill__icon" data-category="tools">
-          <img src="<?php echo get_template_directory_uri();?>/assets/images/git.svg" alt="Git" class="c-skillicon__image">
+        <p class="c-skill-icon p-home-skill__icon" data-category="tools">
+          <img src="<?php echo get_template_directory_uri();?>/assets/images/git.svg" alt="Git" class="c-skill-icon__image">
         </p>
-        <p class="c-skillicon p-home-skill__icon" data-category="tools">
-          <img src="<?php echo get_template_directory_uri();?>/assets/images/github.svg" alt="GitHub" class="c-skillicon__image">
+        <p class="c-skill-icon p-home-skill__icon" data-category="tools">
+          <img src="<?php echo get_template_directory_uri();?>/assets/images/github.svg" alt="GitHub" class="c-skill-icon__image">
         </p>
-        <p class="c-skillicon p-home-skill__icon" data-category="tools">
-          <img src="<?php echo get_template_directory_uri();?>/assets/images/wordpress.svg" alt="WordPress" class="c-skillicon__image">
+        <p class="c-skill-icon p-home-skill__icon" data-category="tools">
+          <img src="<?php echo get_template_directory_uri();?>/assets/images/wordpress.svg" alt="WordPress" class="c-skill-icon__image">
         </p>
-        <p class="c-skillicon p-home-skill__icon" data-category="tools">
-          <img src="<?php echo get_template_directory_uri();?>/assets/images/babel.svg" alt="BABEL" class="c-skillicon__image">
+        <p class="c-skill-icon p-home-skill__icon" data-category="tools">
+          <img src="<?php echo get_template_directory_uri();?>/assets/images/babel.svg" alt="BABEL" class="c-skill-icon__image">
         </p>
-        <p class="c-skillicon p-home-skill__icon" data-category="tools">
-          <img src="<?php echo get_template_directory_uri();?>/assets/images/gulp.svg" alt="Gulp" class="c-skillicon__image">
+        <p class="c-skill-icon p-home-skill__icon" data-category="tools">
+          <img src="<?php echo get_template_directory_uri();?>/assets/images/gulp.svg" alt="Gulp" class="c-skill-icon__image">
         </p>
       </div>
     </div>
   </section>
   <section class="p-home-contact" id="contact">
     <h2 class="c-heading">Contact</h2>
-    <button class="c-primarybutton p-home-contact__button">
+    <button class="c-primary-button p-home-contact__button">
       <a href="<?php echo home_url('/contact'); ?>">Contact</a>
     </button>
   </section>
