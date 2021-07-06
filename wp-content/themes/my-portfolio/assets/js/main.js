@@ -1,20 +1,44 @@
 jQuery(document).ready(function () {
 
   const smoothScroll = () => {
+    const $el = $("html, body");
+    const $headerAnchorLink = $('a[href*="#"]');
+    const headerHeight = $('.l-header').outerHeight();
     const speed = 700;
-    const sectionTopDistance = 70;
-    $('a[href*="#"]').on('click', function () {
-      let href = $(this).attr("href");
-      const developmentURL = location.protocol + "//" + location.hostname + ":8888" + location.pathname;
-      const productionURL = location.protocol + "//" + location.hostname + location.pathname;
-      const localURL = "localhost";
-      const URL = location.href.indexOf(localURL) ? developmentURL : productionURL;
-      href = href.replace(URL, "");
-      const target = $(href == "#" || href == "" ? "html" : href);
-      const position = target.offset().top - sectionTopDistance;
-      $("html, body").animate({ scrollTop: position }, speed, "swing");
-    });
+
+    const scrollWhenTopPage = () => {
+      $headerAnchorLink.on('click', function () {
+        let href = $(this).attr("href");
+        const developmentURL = location.protocol + "//" + location.hostname + ":8888" + location.pathname;
+        const productionURL = location.protocol + "//" + location.hostname + location.pathname;
+        const localURL = "localhost";
+        const URL = location.href.indexOf(localURL) ? developmentURL : productionURL;
+        href = href.replace(URL, "");
+        const target = $(href == "#" || href == "" ? "html" : href);
+        const position = target.offset().top - headerHeight;
+        $el.animate({ scrollTop: position }, speed, "swing");
+      });
+    }
+
+    const scrollAfterPageTransition = () => {
+      let urlHash = location.hash;
+      if(urlHash) {
+        setTimeout(function() {
+          $el.stop().scrollTop(0);
+          const target = $(urlHash);
+          const position = target.offset().top - headerHeight;
+          $el.stop().animate({ scrollTop: position }, speed);
+        }, 300);
+      }
+    }
+
+    if (location.pathname != '/PF/') {
+      scrollAfterPageTransition();
+    } else {
+      scrollWhenTopPage();
+    }
   }
+
   const addHeaderStyle = () => {
     const $window = $(window)
     const $header = $('.l-header');
