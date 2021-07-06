@@ -32,11 +32,11 @@ jQuery(document).ready(function () {
       }
     }
 
-    if (location.pathname != '/PF/') {
-      scrollAfterPageTransition();
-    } else {
-      scrollWhenTopPage();
-    }
+    scrollWhenTopPage();
+    // if (location.pathname = "/PF/") {
+    // } else {
+    //   scrollAfterPageTransition();
+    // }
   }
 
   const addHeaderStyle = () => {
