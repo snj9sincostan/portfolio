@@ -109,7 +109,7 @@ jQuery(document).ready(function () {
   const addAnimationStyle = () => {
     const $window = $(window);
     const $animationAttributeHaveElements = $('*[animation]');
-    $animationAttributeHaveElements.addClass('is-invisible');
+    $animationAttributeHaveElements.addClass('u-invisible');
 
     $window.on('scroll',function () {
       $animationAttributeHaveElements.each(function () {
@@ -119,7 +119,7 @@ jQuery(document).ready(function () {
 
         if (this.hasAttribute('animation') && (scroll > position)) {
           const animation = this.getAttribute('animation');
-          $(this).removeClass('is-invisible').addClass(animation);
+          $(this).removeClass('u-invisible').addClass(animation);
         }
       });
     });
@@ -133,21 +133,4 @@ jQuery(document).ready(function () {
     addAnimationStyle();
   }
   init();
-
-  function a() {
-    const $correctButton = $('.c-correct__button');
-    function s(e) {
-      const parentOffset = $(this).offset(),
-          relX = e.pageX - parentOffset.left,
-          relY = e.pageY - parentOffset.top;
-      $(this).find('span').css({top:relY, left:relX})
-      console.log($(this).offset)
-    }
-      $correctButton.on('mouseenter', s)
-      $correctButton.on('mouseout', s);
-    // $('c-correct__button').click(function(){return false});
-    // $('[href=#]').click(function(){return false});
-  }
-  a()
-
 });

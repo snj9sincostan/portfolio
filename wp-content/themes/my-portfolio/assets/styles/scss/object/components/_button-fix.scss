@@ -1,11 +1,16 @@
 .c-fix {
-  width: 250px;
   text-align: center;
   &__button {
     margin: 0 auto;
     font-size: 1.8rem;
     text-decoration: underline;
     color: rgba(0, 0, 0, 0.7);
+    width: 250px;
+    background-color: transparent;
+    border: none;
+    display: block;
+    width: 250px;
+    padding: 0;
 
     &:hover {
       opacity: 0.8;

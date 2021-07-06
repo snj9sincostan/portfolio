@@ -716,42 +716,27 @@ h1, h2, h3, h4, h5, p {
 
 .c-correct__button {
   margin: 0 auto;
-  position: relative;
   display: block;
-  overflow: hidden;
   width: 250px;
-  margin: 0 auto;
-  text-transform: uppercase;
   border: 1px solid #0276b5;
   color: #0276b5;
   font-size: 1.8rem;
   text-align: center;
-}
-.c-correct__button span {
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background-color: #0276b5;
-  transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
-  transform: translate(-50%, -50%);
-  z-index: -1;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.4s;
 }
 .c-correct__button:hover {
+  transition: all 0.4s;
   color: #ffffff;
-}
-.c-correct__button:hover span {
-  color: #0276b5;
-  width: 500px;
-  height: 500px;
+  background-color: #0276b5;
 }
 .c-correct__button:active {
   background-color: #0276b5;
 }
 
 .c-fix {
-  width: 250px;
   text-align: center;
 }
 .c-fix__button {
@@ -759,6 +744,12 @@ h1, h2, h3, h4, h5, p {
   font-size: 1.8rem;
   text-decoration: underline;
   color: rgba(0, 0, 0, 0.7);
+  width: 250px;
+  background-color: transparent;
+  border: none;
+  display: block;
+  width: 250px;
+  padding: 0;
 }
 .c-fix__button:hover {
   opacity: 0.8;
@@ -1081,7 +1072,7 @@ h1, h2, h3, h4, h5, p {
   animation-name: override-rollIn;
 }
 
-.is-invisible {
+.u-invisible {
   visibility: hidden;
 }
 

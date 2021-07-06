@@ -13,6 +13,7 @@ Template Name: portfolio
         <img src="<?php echo get_template_directory_uri();?>/assets/images/Hero.png" alt="ポートフォリオ画像">
       </p>
       <div class="p-page-portfolio__description">
+      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <h3 class="c-secondaryHeading" data-en="What">ポートフォリオの概要</h3>
         <p class="p-page-portfolio__text">
           この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
@@ -43,6 +44,8 @@ Template Name: portfolio
         </p>
       </div>
     </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
     <button class="c-primarybutton p-page-portfolio__button">
       <a href="<?php echo home_url(); ?>">トップへ戻る</a>
     </button>
