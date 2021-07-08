@@ -1,4 +1,4 @@
-jQuery(document).ready(function () {
+jQuery(document).ready(() => {
 
 
   const smoothScroll = ()=> {
@@ -6,8 +6,8 @@ jQuery(document).ready(function () {
     const headerHeight = $('.l-header').outerHeight();
     $('a[href*="#"]').click(function(){
       let href= $(this).attr("href");
-      const developmentUrl = location.protocol + '//' + location.hostname + ':8888' + location.pathname;
-      const productionUrl = location.protocol + '//' + location.hostname + location.pathname;
+      const developmentUrl = `${location.protocol}//${location.hostname}:8888${location.pathname}`;
+      const productionUrl = `${location.protocol}//${location.hostname}${location.pathname}`;
       const url = (location.href === 'localhost:8888') ? productionUrl : developmentUrl;
       href = href.replace(url, '');
       const target = $(href == "#" || href == "" ? 'html' : href);
@@ -47,7 +47,7 @@ jQuery(document).ready(function () {
       $burgerIcon.trigger('click');
     }
 
-    $burgerIcon.on('click', function() {
+    $burgerIcon.on('click', () => {
       $body.toggleClass('u-no-scroll');
       $burgerIcon.toggleClass('is-open');
       $headerNav.toggleClass('is-show');
@@ -70,13 +70,13 @@ jQuery(document).ready(function () {
 
       if ($activeTabHaveDataFilter == 'all') {
         $skillIconCategory.removeClass('is-animated')
-        .fadeOut().promise().done(function() {
+        .fadeOut().promise().done(() => {
           $skillIconCategory.addClass('is-animated').fadeIn();
         });
       } else {
         $skillIconCategory.removeClass('is-animated')
-        .fadeOut().promise().done(function() {
-          $skillIconCategory.filter('[data-category = "'+ $activeTabHaveDataFilter +'"]')
+        .fadeOut().promise().done(() => {
+          $skillIconCategory.filter(`[data-category = "${$activeTabHaveDataFilter}"]`)
           .addClass('is-animated').fadeIn();
         })
       }
@@ -88,7 +88,7 @@ jQuery(document).ready(function () {
     const $animationAttributeHaveElements = $('*[animation]');
     $animationAttributeHaveElements.addClass('u-invisible');
 
-    $window.on('scroll',function () {
+    $window.on('scroll',() => {
       $animationAttributeHaveElements.each(function () {
         const elementPosition = $(this).offset().top;
         const scroll = $(window).scrollTop();
