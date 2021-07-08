@@ -108,7 +108,6 @@ jQuery(document).ready(() => {
     smoothScroll();
     addHeaderStyle();
     addAnimationStyle();
-    smoothScroll();
   }
   init();
 });
