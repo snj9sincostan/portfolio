@@ -1,0 +1,10 @@
+$breakpoint-up: (
+  'md': 'screen and (min-width: 769px)',
+  'lg': 'screen and (min-width: 841px)',
+) !default;
+
+$breakpoint-down:(
+  'sm': 'screen and (max-width: 500px)',
+  'md': 'screen and (max-width: 768px)',
+  'lg': 'screen and (max-width: 840px)',
+) !default;
