@@ -1,3 +1,15 @@
+// primary
+.c-heading {
+  font-size: 3.6rem;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .c-heading {
+    font-size: 2.8rem;
+  }
+}
+
+// secondary
 .c-heading-secondary {
   font-size: 3.2rem;
   color: $color_black;
