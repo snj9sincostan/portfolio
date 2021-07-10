@@ -2,9 +2,7 @@
 .c-heading {
   font-size: 3.6rem;
   text-align: center;
-}
-@media screen and (max-width: 500px) {
-  .c-heading {
+  @include mq-down(sm) {
     font-size: 2.8rem;
   }
 }
@@ -15,7 +13,9 @@
   color: $color_black;
   position: relative;
 	padding-top: 50px;
-
+  @include mq-down(sm) {
+    font-size: 2.2rem;
+  }
   &::before {
     content: attr(data-en);
     position: absolute;
@@ -27,14 +27,7 @@
     font-weight: 400;
     font-family: luxus-brut, cursive;
     font-style: italic;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .c-heading-secondary{
-    font-size: 2.2rem;
-
-    &::before {
+    @include mq-down(sm) {
       font-size: 5.5rem;
       top: 5px;
     }
