@@ -898,24 +898,28 @@ h1, h2, h3, h4, h5, p {
   max-width: 840px;
   margin: 61px auto 0;
 }
+@media screen and (max-width: 768px) {
+  .p-home-portfolio__inner {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .p-home-portfolio__card {
+    margin: 0 auto;
+  }
+}
 .p-home-portfolio__card:not(:first-child) {
   margin-left: 50px;
+}
+@media screen and (max-width: 768px) {
+  .p-home-portfolio__card:not(:first-child) {
+    margin: 40px auto 0;
+  }
 }
 .p-home-portfolio__button {
   width: 180px;
 }
 
-@media screen and (max-width: 768px) {
-  .p-home-portfolio__inner {
-    display: block;
-  }
-  .p-home-portfolio__card {
-    margin: 0 auto;
-  }
-  .p-home-portfolio__card:not(:first-child) {
-    margin: 40px auto 0;
-  }
-}
 .p-home-skill {
   padding: 50px 0 63px;
 }

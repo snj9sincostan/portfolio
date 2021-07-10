@@ -7,25 +7,22 @@
     align-items: center;
     max-width: 840px;
     margin: 61px auto 0;
-  }
-  &__card:not(:first-child) {
-    margin-left: 50px;
-  }
-  &__button {
-    width: 180px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .p-home-portfolio {
-    &__inner {
+    @include mq-down(md) {
       display: block;
     }
-    &__card {
+  }
+  &__card {
+    @include mq-down(md) {
       margin: 0 auto;
-      &:not(:first-child) {
+    }
+    &:not(:first-child) {
+      margin-left: 50px;
+      @include mq-down(md) {
         margin: 40px auto 0;
       }
     }
+  }
+  &__button {
+    width: 180px;
   }
 }
