@@ -73,7 +73,7 @@
     </div>
   </div>
   <section class="p-home-about" id="about">
-    <h2 class="c-heading">About</h2>
+    <h2 class="c-headingPrimary">About</h2>
     <div class="p-home-about__inner">
       <div class="p-home-about__body">
         <div class="p-home-about__name animate__animated" animation="animate__fadeInLeft">
@@ -94,7 +94,7 @@
     </div>
   </section>
   <section class="p-home-portfolio" id="portfolio">
-    <h2 class="c-heading">Portfolio</h2>
+    <h2 class="c-headingPrimary">Portfolio</h2>
     <div class="p-home-portfolio__inner">
       <article class="c-card p-home-portfolio__card animate__animated" animation="animate__fadeInUp">
         <p class="c-card__image">
@@ -135,7 +135,7 @@
     </div>
   </section>
   <section class="p-home-skill" id="skill">
-    <h2 class="c-heading">Skill</h2>
+    <h2 class="c-headingPrimary">Skill</h2>
     <div class="p-home-skill__body">
       <ul class="c-tab animate__animated" id="tab" animation="animate__fadeInUp">
         <li class="c-tab__item is-active" data-filter="all">All</li>
@@ -177,7 +177,7 @@
     </div>
   </section>
   <section class="p-home-contact" id="contact">
-    <h2 class="c-heading">Contact</h2>
+    <h2 class="c-headingPrimary">Contact</h2>
     <button class="c-buttonPrimary p-home-contact__button">
       <a href="<?php echo home_url('/contact'); ?>">Contact</a>
     </button>
