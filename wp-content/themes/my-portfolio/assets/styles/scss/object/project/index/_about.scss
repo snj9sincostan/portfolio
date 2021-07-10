@@ -7,17 +7,28 @@
   &__inner {
     display: flex;
     margin-top: 20px;
+    @include mq-down(md) {
+      display: block;
+    }
   }
 
   &__body {
     width: 100%;
     padding: 0 20px;
+    @include mq-down(md) {
+      max-width: 635px;
+      margin: 0 auto;
+    }
   }
 
   &__name {
     display: flex;
     align-items: center;
     height: 32px;
+    @include mq-down(md) {
+      margin: 0 auto;
+      text-align: center;
+    }
   }
 
   &__ja {
@@ -34,39 +45,19 @@
     font-size: 18px;
     margin-top: 15px;
     line-height: 1.8;
+    @include mq-down(md) {
+      margin: 15px auto 0;
+    }
   }
   &__icon {
     width: 250px;
+    @include mq-down(md) {
+      margin: 20px auto 0;
+      width: 200px;
+    }
     img {
       display: block;
       border-radius: 9999px;
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .p-home-about {
-
-    &__inner {
-      display: block;
-    }
-
-    &__body {
-      max-width: 635px;
-      margin: 0 auto;
-    }
-
-    &__name {
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    &__description {
-      margin: 15px auto 0;
-    }
-    &__icon {
-      margin: 20px auto 0;
-      width: 200px;
     }
   }
 }

@@ -8,3 +8,15 @@ $breakpoint-down:(
   'md': 'screen and (max-width: 768px)',
   'lg': 'screen and (max-width: 840px)',
 ) !default;
+
+@mixin mq-up($breakpoint: md) {
+  @media #{map-get($breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-down($breakpoint: md) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
