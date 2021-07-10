@@ -818,7 +818,6 @@ h1, h2, h3, h4, h5, p {
     max-width: 300px;
   }
 }
-
 .p-home-about {
   padding: 40px 0 50px;
   margin: 0 auto;
@@ -888,7 +887,6 @@ h1, h2, h3, h4, h5, p {
   display: block;
   border-radius: 9999px;
 }
-
 .p-home-portfolio {
   background-color: #f8f9fa;
   padding: 40px 0 79px;
@@ -920,7 +918,6 @@ h1, h2, h3, h4, h5, p {
 .p-home-portfolio__button {
   width: 180px;
 }
-
 .p-home-skill {
   padding: 50px 0 63px;
 }
@@ -962,7 +959,6 @@ h1, h2, h3, h4, h5, p {
     margin-top: 40px;
   }
 }
-
 .p-home-contact {
   background-image: url(../images/Contact-body.png);
   background-size: cover;
