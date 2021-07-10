@@ -539,12 +539,12 @@ h1, h2, h3, h4, h5, p {
   margin: 0 auto;
   padding: 50px 20px 85px;
 }
-
 @media screen and (max-width: 500px) {
   .l-contact-wrap {
     padding-bottom: 45px;
   }
 }
+
 .c-primary-button {
   background-color: #18a0fb;
   border-radius: 9999px;
