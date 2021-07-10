@@ -419,42 +419,12 @@ h1, h2, h3, h4, h5, p {
 .l-header__logo:hover {
   opacity: 0.8;
 }
-.l-header__list {
-  display: flex;
-  justify-content: space-between;
+@media screen and (max-width: 500px) {
+  .l-header__logo {
+    width: 150px;
+    height: 40px;
+  }
 }
-.l-header__item {
-  font-size: 1.6rem;
-}
-.l-header__item:hover {
-  opacity: 0.8;
-}
-.l-header.is-fixed {
-  color: #000000;
-  background-color: #ffffff;
-  transition: all 0.3s;
-}
-.l-header.is-fixed .l-header__burger-line {
-  background-color: #000000;
-  transition: all 0.3s;
-}
-.l-header.is-sticky {
-  position: sticky;
-  color: #000000;
-  background-color: #ffffff;
-  transition: all 0.3s;
-}
-.l-header.is-sticky .l-header__burger-line {
-  background-color: #000000;
-  transition: all 0.3s;
-}
-.l-header.is-active .l-header__logo {
-  color: #000;
-}
-.l-header__burger {
-  display: none;
-}
-
 @media screen and (min-width: 769px) {
   .l-header__nav {
     width: 375px;
@@ -467,9 +437,21 @@ h1, h2, h3, h4, h5, p {
   }
   .l-header__nav.is-show {
     color: #000000;
-    background-color: #fff;
+    background-color: #ffffff;
     display: block;
   }
+}
+.l-header__list {
+  display: flex;
+  justify-content: space-between;
+}
+.l-header__item {
+  font-size: 1.6rem;
+}
+.l-header__item:hover {
+  opacity: 0.8;
+}
+@media screen and (max-width: 768px) {
   .is-show .l-header__list {
     display: block;
     position: fixed;
@@ -486,6 +468,11 @@ h1, h2, h3, h4, h5, p {
     text-align: center;
     margin-top: 20px;
   }
+}
+.l-header__burger {
+  display: none;
+}
+@media screen and (max-width: 768px) {
   .l-header__burger {
     background-color: transparent;
     border: none;
@@ -516,12 +503,29 @@ h1, h2, h3, h4, h5, p {
     transform: translateY(-11px) rotate(-135deg);
   }
 }
-@media screen and (max-width: 500px) {
-  .l-header__logo {
-    width: 150px;
-    height: 40px;
-  }
+.l-header.is-fixed {
+  color: #000000;
+  background-color: #ffffff;
+  transition: all 0.3s;
 }
+.l-header.is-fixed .l-header__burger-line {
+  background-color: #000000;
+  transition: all 0.3s;
+}
+.l-header.is-sticky {
+  position: sticky;
+  color: #000000;
+  background-color: #ffffff;
+  transition: all 0.3s;
+}
+.l-header.is-sticky .l-header__burger-line {
+  background-color: #000000;
+  transition: all 0.3s;
+}
+.l-header.is-active .l-header__logo {
+  color: #000000;
+}
+
 .l-footer {
   background-color: #18a0fb;
   color: #ffffff;
