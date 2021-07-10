@@ -545,6 +545,61 @@ h1, h2, h3, h4, h5, p {
   }
 }
 
+.c-button__primary {
+  background-color: #18a0fb;
+  border-radius: 9999px;
+  border: none;
+  padding: 5px 0px;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.c-button__primary a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+}
+.c-button__primary:hover {
+  opacity: 0.8;
+}
+.c-button__correct {
+  margin: 0 auto;
+  display: block;
+  width: 250px;
+  height: 30px;
+  border: 1px solid #0276b5;
+  color: #0276b5;
+  font-size: 1.8rem;
+  text-align: center;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.4s;
+}
+.c-button__correct:hover {
+  transition: all 0.4s;
+  color: #ffffff;
+  background-color: #0276b5;
+}
+.c-button__correct:active {
+  background-color: #0276b5;
+}
+.c-button__fix {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.7);
+  width: 250px;
+  background-color: transparent;
+  border: none;
+  display: block;
+  width: 250px;
+  padding: 0;
+}
+.c-button__fix:hover {
+  opacity: 0.8;
+}
+
 .c-primary-button {
   background-color: #18a0fb;
   border-radius: 9999px;
