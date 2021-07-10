@@ -9,6 +9,26 @@
   transition: transform 0.3s;
   background-color: $color_white;
   padding-bottom: 15px;
+  @include mq-up(md) {
+    &.animate__fadeInUp {
+      &:nth-of-type(2) {
+        animation-delay: .3s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: .6s;
+      }
+    }
+  }
+  @include mq-down(md) {
+    .animate__fadeInUp {
+      &:nth-of-type(2) {
+        animation-delay: .3s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: .3s;
+      }
+    }
+  }
 
   &:hover {
     transform: translateY(-5px);
@@ -38,27 +58,5 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .c-card.animate__fadeInUp {
-    &:nth-of-type(2) {
-      animation-delay: .3s;
-    }
-    &:nth-of-type(3) {
-      animation-delay: .6s;
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .c-card.animate__fadeInUp {
-    &:nth-of-type(2) {
-      animation-delay: .3s;
-    }
-    &:nth-of-type(3) {
-      animation-delay: .3s;
-    }
   }
 }
