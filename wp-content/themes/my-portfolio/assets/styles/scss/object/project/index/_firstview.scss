@@ -16,6 +16,9 @@
     stroke-miterlimit: 0;
     stroke-dasharray: 1500;
     stroke-dashoffset: 1500;
+    @include mq-down(md) {
+      stroke-width: 2.5;
+    }
   }
   &__hero {
     position: relative;
@@ -30,38 +33,22 @@
       bottom: 0;
       left: 0;
       margin: auto;
+      @include mq-down(md) {
+        width: 300px;
+      }
     }
   }
   #catchcopy-pc {
     width: 100%;
     max-width: 695px;
     margin: 0 auto;
+    @include mq-down(md) {
+      display: none;
+    }
   }
   #catchcopy-sp {
     display: none;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .p-home-firstview #catchcopy-sp {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .p-home-firstview {
-    &__inner {
-      stroke-width:2.5;
-    }
-    &__hero {
-      &-item {
-        width: 300px;
-      }
-    }
-    #catchcopy-pc {
-      display: none;
-    }
-    #catchcopy-sp {
+    @include mq-down(md) {
       display: block;
       width: 100%;
       max-width: 300px;
