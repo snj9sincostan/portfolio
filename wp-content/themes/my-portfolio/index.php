@@ -34,7 +34,7 @@
   <section class="p-home-portfolio" id="portfolio">
     <h2 class="c-headingPrimary">Portfolio</h2>
     <div class="p-home-portfolio__inner">
-      <article class="c-card p-home-portfolio__card animate__animated" animation="animate__fadeInUp">
+      <div class="c-card p-home-portfolio__card animate__animated" animation="animate__fadeInUp">
         <p class="c-card__image">
           <img src="<?php echo get_template_directory_uri();?>/assets/images/Hero.png" alt="">
         </p>
@@ -45,8 +45,8 @@
         <button class="c-buttonPrimary p-home-portfolio__button">
           <a href="<?php echo home_url('/portfolio'); ?>">Show more</a>
         </button>
-      </article>
-      <article class="c-card p-home-portfolio__card animate__animated" animation="animate__fadeInUp">
+      </div>
+      <div class="c-card p-home-portfolio__card animate__animated" animation="animate__fadeInUp">
         <p class="c-card__image">
           <img src="<?php echo get_template_directory_uri();?>/assets/images/Hero.png" alt="">
         </p>
@@ -57,8 +57,8 @@
         <button class="c-buttonPrimary p-home-portfolio__button">
           <a href="<?php echo home_url('/portfolio2'); ?>">Show more</a>
         </button>
-      </article>
-      <article class="c-card p-home-portfolio__card animate__animated" animation="animate__fadeInUp">
+      </div>
+      <div class="c-card p-home-portfolio__card animate__animated" animation="animate__fadeInUp">
         <p class="c-card__image">
           <img src="<?php echo get_template_directory_uri();?>/assets/images/Hero.png" alt="">
         </p>
@@ -69,7 +69,7 @@
         <button class="c-buttonPrimary p-home-portfolio__button">
           <a href="<?php echo home_url('/portfolio3'); ?>">Show more</a>
         </button>
-      </article>
+      </div>
     </div>
   </section>
   <section class="p-home-skill" id="skill">
