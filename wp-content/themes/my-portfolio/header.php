@@ -26,9 +26,9 @@
         ));
       ;?>
       <button class="l-header__burger">
-        <span class="l-header__burger-line"></span>
-        <span class="l-header__burger-line"></span>
-        <span class="l-header__burger-line"></span>
+        <span class="l-header__burgerLine"></span>
+        <span class="l-header__burgerLine"></span>
+        <span class="l-header__burgerLine"></span>
       </button>
     </div>
   </header>

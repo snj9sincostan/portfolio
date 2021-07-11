@@ -24,7 +24,7 @@ jQuery(document).ready(() => {
     const fixed = 'is-fixed';
     const headerHeight = 70;
 
-    function toggleClass() {
+    const toggleClass = () => {
       const value = $window.scrollTop();
       if ($firstViewHeight - headerHeight <= value) {
         $header.addClass(fixed);
