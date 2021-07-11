@@ -15,11 +15,11 @@
     text-align: center;
     font-weight: bold;
     &.is-active {
-      background-color: $button_color;
+      background-color: $color_skyblue;
       color: $color_white;
     }
     &:hover {
-      background-color: $button_color;
+      background-color: $color_skyblue;
       color: $color_white;
       transition: background-color 0.3s, color 0.3s;
     }
