@@ -5,7 +5,6 @@
 * 1. Add border box sizing in all browsers (opinionated).
 * 2. Backgrounds do not repeat by default (opinionated).
 */
-@import url("https://fonts.googleapis.com/css2?family=Bellota:wght@400;700&display=swap");
 *,
 ::before,
 ::after {
@@ -356,12 +355,6 @@
   position: absolute;
 }
 
-@font-face {
-  font-family: "Bellota";
-  src: url("../../../fonts/Bellota-Regular.ttf") format("ttf"), url("../../../fonts/Bellota-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 *, ::after, ::before {
   box-sizing: border-box;
 }
