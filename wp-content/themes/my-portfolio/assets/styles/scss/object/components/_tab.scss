@@ -26,10 +26,6 @@
   }
 }
 
-.is-animated {
-  animation: .6s rotate-right;
-}
-
 @media screen and (max-width: 500px) {
   .c-tab {
     &__item {

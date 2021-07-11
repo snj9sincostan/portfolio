@@ -563,6 +563,7 @@ h1, h2, h3, h4, h5, p {
 .c-buttonPrimary:hover {
   opacity: 0.8;
 }
+
 .c-buttonCorrect {
   margin: 0 auto;
   display: block;
@@ -585,6 +586,7 @@ h1, h2, h3, h4, h5, p {
 .c-buttonCorrect:active {
   background-color: #0276b5;
 }
+
 .c-buttonFix {
   text-align: center;
   margin: 0 auto;
@@ -635,16 +637,19 @@ h1, h2, h3, h4, h5, p {
   transform: translateY(-5px);
   box-shadow: 2px 2px 26px 0px rgba(0, 0, 0, 0.3);
 }
+
 .c-card__image img {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
+
 .c-card__title {
   min-width: 190px;
   font-size: 2.4rem;
   padding: 10px 5px 0;
   text-align: center;
 }
+
 .c-card__text {
   padding: 0px 20px;
   font-size: 1.2rem;
@@ -714,6 +719,10 @@ h1, h2, h3, h4, h5, p {
   width: 100%;
 }
 
+.is-animated {
+  animation: 0.6s rotate-right;
+}
+
 @keyframes rotate-right {
   0% {
     transform: translate(-100%) rotate(-100deg);
@@ -748,10 +757,6 @@ h1, h2, h3, h4, h5, p {
   background-color: #18a0fb;
   color: #ffffff;
   transition: background-color 0.3s, color 0.3s;
-}
-
-.is-animated {
-  animation: 0.6s rotate-right;
 }
 
 @media screen and (max-width: 500px) {
