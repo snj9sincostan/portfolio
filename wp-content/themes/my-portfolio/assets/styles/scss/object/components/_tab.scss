@@ -4,16 +4,23 @@
   list-style: none;
   width: 100%;
   max-width: 500px;
-  padding: 0 10px;
+  padding: 0;
   margin: 0 auto;
+  @include mq-down(sm) {
+    padding: 0 20px;
+  }
   &__item {
     border-radius: 9999px;
     cursor: pointer;
-    font-size: 2.6rem;
-    width: 140px;
-    height: 40px;
+    font-size: 2.2rem;
+    min-width: 140px;
+    padding: 0 20px;
     text-align: center;
     font-weight: bold;
+    @include mq-down(sm) {
+      font-size: 1.6rem;
+      min-width: 80px;
+    }
     &.is-active {
       background-color: $color_skyblue;
       color: $color_white;
@@ -22,16 +29,6 @@
       background-color: $color_skyblue;
       color: $color_white;
       transition: background-color 0.3s, color 0.3s;
-    }
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .c-tab {
-    &__item {
-      font-size: 1.6rem;
-      width: 90px;
-      height: 25px;
     }
   }
 }

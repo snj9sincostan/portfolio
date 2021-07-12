@@ -662,6 +662,12 @@ h1, h2, h3, h4, h5, p {
   overflow: hidden;
 }
 
+.c-contactText {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-top: 30px;
+}
+
 .c-headingPrimary {
   font-size: 3.6rem;
   text-align: center;
@@ -672,33 +678,34 @@ h1, h2, h3, h4, h5, p {
   }
 }
 
-.c-required {
-  color: #ffffff;
-  background-color: #f3bf27;
-  display: inline-block;
-  text-align: center;
-  border-radius: 9999px;
-  width: 56px;
-  margin-left: 15px;
-}
-
 .c-tab {
   display: flex;
   justify-content: space-between;
   list-style: none;
   width: 100%;
   max-width: 500px;
-  padding: 0 10px;
+  padding: 0;
   margin: 0 auto;
+}
+@media screen and (max-width: 500px) {
+  .c-tab {
+    padding: 0 20px;
+  }
 }
 .c-tab__item {
   border-radius: 9999px;
   cursor: pointer;
-  font-size: 2.6rem;
-  width: 140px;
-  height: 40px;
+  font-size: 2.2rem;
+  min-width: 140px;
+  padding: 0 20px;
   text-align: center;
   font-weight: bold;
+}
+@media screen and (max-width: 500px) {
+  .c-tab__item {
+    font-size: 1.6rem;
+    min-width: 80px;
+  }
 }
 .c-tab__item.is-active {
   background-color: #18a0fb;
@@ -710,13 +717,6 @@ h1, h2, h3, h4, h5, p {
   transition: background-color 0.3s, color 0.3s;
 }
 
-@media screen and (max-width: 500px) {
-  .c-tab__item {
-    font-size: 1.6rem;
-    width: 90px;
-    height: 25px;
-  }
-}
 /******************************************************************
 Style: FirstView
 ******************************************************************/
@@ -1063,6 +1063,16 @@ Style: Contact
 .p-contact-form__title {
   font-size: 1.6rem;
   font-weight: bold;
+}
+
+.p-contact-form__required {
+  color: #ffffff;
+  background-color: #f3bf27;
+  display: inline-block;
+  text-align: center;
+  border-radius: 9999px;
+  width: 56px;
+  margin-left: 15px;
 }
 
 .p-contact-form__inputWrap {

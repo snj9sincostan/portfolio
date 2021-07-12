@@ -1,9 +1,7 @@
-.c-heading {
-  &Primary {
-    font-size: 3.6rem;
-    text-align: center;
-    @include mq-down(sm) {
-      font-size: 2.8rem;
-    }
+.c-headingPrimary {
+  font-size: 3.6rem;
+  text-align: center;
+  @include mq-down(sm) {
+    font-size: 2.8rem;
   }
 }

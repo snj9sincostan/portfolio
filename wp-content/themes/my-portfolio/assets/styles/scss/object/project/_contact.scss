@@ -24,6 +24,16 @@
   font-weight: bold;
 }
 
+.p-contact-form__required {
+  color: $color_white;
+  background-color: $required_color;
+  display: inline-block;
+  text-align: center;
+  border-radius: 9999px;
+  width: 56px;
+  margin-left: 15px;
+}
+
 .p-contact-form__inputWrap {
   margin: 0;
   &:not(:first-child) {
