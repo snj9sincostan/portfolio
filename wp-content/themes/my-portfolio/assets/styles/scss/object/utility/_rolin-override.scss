@@ -13,3 +13,22 @@
 .animate__animated.animate__rollIn {
   animation-name: override-rollIn;
 }
+
+/******************************************************************
+
+Style: Skill_Icon__Animation
+
+******************************************************************/
+
+.is-animated {
+  animation: .6s rotate-right;
+}
+
+@keyframes rotate-right {
+  0% {
+    transform: translate(-100%) rotate(-100deg);
+  }
+  100% {
+    transform: none;
+  }
+}

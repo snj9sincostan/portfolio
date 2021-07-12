@@ -672,36 +672,6 @@ h1, h2, h3, h4, h5, p {
   }
 }
 
-.c-headingSecondary {
-  font-size: 3.2rem;
-  color: #000000;
-  position: relative;
-  padding-top: 50px;
-}
-@media screen and (max-width: 500px) {
-  .c-headingSecondary {
-    font-size: 2.2rem;
-  }
-}
-.c-headingSecondary::before {
-  content: attr(data-en);
-  position: absolute;
-  transform: rotate(-5deg);
-  top: -20px;
-  left: -20px;
-  color: rgba(52, 131, 225, 0.3);
-  font-size: 8rem;
-  font-weight: 400;
-  font-family: luxus-brut, cursive;
-  font-style: italic;
-}
-@media screen and (max-width: 500px) {
-  .c-headingSecondary::before {
-    font-size: 5.5rem;
-    top: 5px;
-  }
-}
-
 .c-required {
   color: #ffffff;
   background-color: #f3bf27;
@@ -712,25 +682,6 @@ h1, h2, h3, h4, h5, p {
   margin-left: 15px;
 }
 
-.c-skill-icon {
-  min-width: 128px;
-}
-.c-skill-icon__image {
-  width: 100%;
-}
-
-.is-animated {
-  animation: 0.6s rotate-right;
-}
-
-@keyframes rotate-right {
-  0% {
-    transform: translate(-100%) rotate(-100deg);
-  }
-  100% {
-    transform: none;
-  }
-}
 .c-tab {
   display: flex;
   justify-content: space-between;
@@ -988,6 +939,7 @@ Style: Skill
 }
 
 .p-home-skill__icon {
+  min-width: 128px;
   width: calc(20% - 40px);
   margin-bottom: 80px;
 }
@@ -1003,6 +955,10 @@ Style: Skill
   .p-home-skill__icon:nth-of-type(n + 3) {
     margin-top: 40px;
   }
+}
+
+.p-home-skill__iconImage {
+  width: 100%;
 }
 
 /******************************************************************
@@ -1036,6 +992,36 @@ Style: Contact
   margin-top: 50px;
 }
 
+.p-page-portfolio__title {
+  font-size: 3.2rem;
+  color: #000000;
+  position: relative;
+  padding-top: 40px;
+}
+@media screen and (max-width: 500px) {
+  .p-page-portfolio__title {
+    font-size: 2.2rem;
+  }
+}
+.p-page-portfolio__title::before {
+  content: attr(data-en);
+  position: absolute;
+  transform: rotate(-5deg);
+  top: -20px;
+  left: -20px;
+  color: rgba(52, 131, 225, 0.3);
+  font-size: 8rem;
+  font-weight: 400;
+  font-family: luxus-brut, cursive;
+  font-style: italic;
+}
+@media screen and (max-width: 500px) {
+  .p-page-portfolio__title::before {
+    font-size: 5.5rem;
+    top: 5px;
+  }
+}
+
 .p-page-portfolio__text {
   font-size: 2.4rem;
 }
@@ -1061,63 +1047,75 @@ Style: Contact
   max-width: 680px;
   margin: 80px auto 0;
 }
+
 .p-contact-form__items {
   margin-bottom: 0;
 }
 .p-contact-form__items:not(:first-child) {
   margin-top: 20px;
 }
+@media screen and (max-width: 500px) {
+  .p-contact-form__items:not(:first-child) {
+    margin-top: 10px;
+  }
+}
+
 .p-contact-form__title {
   font-size: 1.6rem;
   font-weight: bold;
 }
-.p-contact-form__input-wrap {
+
+.p-contact-form__inputWrap {
   margin: 0;
 }
-.p-contact-form__input-wrap:not(:first-child) {
+.p-contact-form__inputWrap:not(:first-child) {
   margin-top: 20px;
 }
-.p-contact-form__input-wrap input, .p-contact-form__input-wrap textarea {
+@media screen and (max-width: 500px) {
+  .p-contact-form__inputWrap:not(:first-child) {
+    margin-top: 10px;
+  }
+}
+
+.p-contact-form__input {
+  height: 38px;
   width: 100%;
   background-color: #eeeeee;
   border: none;
   border-radius: 2px;
 }
-.p-contact-form__input-wrap input {
-  height: 38px;
-}
-.p-contact-form__input-wrap textarea {
+
+.p-contact-form__textarea {
   resize: none;
   height: 420px;
   padding: 0;
+  width: 100%;
+  background-color: #eeeeee;
+  border: none;
+  border-radius: 2px;
+}
+@media screen and (max-width: 500px) {
+  .p-contact-form__textarea {
+    height: 315px;
+  }
 }
 
-.p-contact-button {
+.p-contact-form__button {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
   margin-top: 40px;
 }
-
 @media screen and (max-width: 500px) {
-  .p-contact-form__items:not(:first-child) {
-    margin-top: 10px;
-  }
-  .p-contact-form__input-wrap:not(:first-child) {
-    margin-top: 10px;
-  }
-  .p-contact-form__input-wrap textarea {
-    height: 315px;
-  }
-
-  .p-contact-button {
+  .p-contact-form__button {
     display: block;
     margin-top: 60px;
   }
-  .p-contact-button__fix {
+  .p-contact-form__button__fix {
     margin: 20px auto 0;
   }
 }
+
 .u-fz-16 {
   font-size: 1.6rem;
 }
@@ -1140,6 +1138,23 @@ Style: Contact
   animation-name: override-rollIn;
 }
 
+/******************************************************************
+
+Style: Skill_Icon__Animation
+
+******************************************************************/
+.is-animated {
+  animation: 0.6s rotate-right;
+}
+
+@keyframes rotate-right {
+  0% {
+    transform: translate(-100%) rotate(-100deg);
+  }
+  100% {
+    transform: none;
+  }
+}
 .u-screen-whitespace-adjust {
   height: calc(100vh - 70px - 30px);
 }

@@ -14,7 +14,7 @@ Template Name: portfolio
       </p>
       <div class="p-page-portfolio__description">
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <h3 class="c-headingSecondary" data-en="What">ポートフォリオの概要</h3>
+        <h3 class="p-page-portfolio__title" data-en="What">ポートフォリオの概要</h3>
         <p class="p-page-portfolio__text">
           この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
           この文章はダミーです。文字の大きさ、量、字間この文章はダミーです。
@@ -24,7 +24,7 @@ Template Name: portfolio
         </p>
       </div>
       <div class="p-page-portfolio__description">
-        <h3 class="c-headingSecondary" data-en="Why">なぜこれを作ったか</h3>
+        <h3 class="p-page-portfolio__title" data-en="Why">なぜこれを作ったか</h3>
         <p class="p-page-portfolio__text">
           この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
           この文章はダミーです。文字の大きさ、量、字間この文章はダミーです。
@@ -34,7 +34,7 @@ Template Name: portfolio
         </p>
       </div>
       <div class="p-page-portfolio__description">
-        <h3 class="c-headingSecondary" data-en="How">どんなことを意識して作ったか</h3>
+        <h3 class="p-page-portfolio__title" data-en="How">どんなことを意識して作ったか</h3>
         <p class="p-page-portfolio__text">
           この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
           この文章はダミーです。文字の大きさ、量、字間この文章はダミーです。

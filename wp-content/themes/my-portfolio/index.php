@@ -81,35 +81,35 @@
         <li class="c-tab__item" data-filter="tools">Tools</li>
       </ul>
       <div class="p-home-skill__list animate__animated" id="icons" animation="animate__fadeInUp">
-        <p class="c-skill-icon p-home-skill__icon" data-category="language">
-          <img src="<?php echo get_template_directory_uri();?>/assets/images/html5.svg" alt="HTML5" class="c-skill-icon__image">
+        <p class="p-home-skill__icon" data-category="language">
+          <img class="p-home-skill__iconImage" src="<?php echo get_template_directory_uri();?>/assets/images/html5.svg" alt="HTML5">
         </p>
-        <p class="c-skill-icon p-home-skill__icon" data-category="language">
-          <img src="<?php echo get_template_directory_uri();?>/assets/images/css3.svg" alt="CSS3" class="c-skill-icon__image">
+        <p class="p-home-skill__icon" data-category="language">
+          <img class="p-home-skill__iconImage" src="<?php echo get_template_directory_uri();?>/assets/images/css3.svg" alt="CSS3">
         </p>
-        <p class="c-skill-icon p-home-skill__icon" data-category="language">
-          <img src="<?php echo get_template_directory_uri();?>/assets/images/javascript.svg" alt="JavaScript" class="c-skill-icon__image">
+        <p class="p-home-skill__icon" data-category="language">
+          <img class="p-home-skill__iconImage" src="<?php echo get_template_directory_uri();?>/assets/images/javascript.svg" alt="JavaScript">
         </p>
-        <p class="c-skill-icon p-home-skill__icon" data-category="language">
-          <img src="<?php echo get_template_directory_uri();?>/assets/images/sass.svg" alt="Sass" class="c-skill-icon__image">
+        <p class="p-home-skill__icon" data-category="language">
+          <img class="p-home-skill__iconImage" src="<?php echo get_template_directory_uri();?>/assets/images/sass.svg" alt="Sass">
         </p>
-        <p class="c-skill-icon p-home-skill__icon" data-category="language">
-          <img src="<?php echo get_template_directory_uri();?>/assets/images/jquery.svg" alt="jQuery" class="c-skill-icon__image">
+        <p class="p-home-skill__icon" data-category="language">
+          <img class="p-home-skill__iconImage" src="<?php echo get_template_directory_uri();?>/assets/images/jquery.svg" alt="jQuery">
         </p>
-        <p class="c-skill-icon p-home-skill__icon" data-category="tools">
-          <img src="<?php echo get_template_directory_uri();?>/assets/images/git.svg" alt="Git" class="c-skill-icon__image">
+        <p class="p-home-skill__icon" data-category="tools">
+          <img class="p-home-skill__iconImage" src="<?php echo get_template_directory_uri();?>/assets/images/git.svg" alt="Git">
         </p>
-        <p class="c-skill-icon p-home-skill__icon" data-category="tools">
-          <img src="<?php echo get_template_directory_uri();?>/assets/images/github.svg" alt="GitHub" class="c-skill-icon__image">
+        <p class="p-home-skill__icon" data-category="tools">
+          <img class="p-home-skill__iconImage" src="<?php echo get_template_directory_uri();?>/assets/images/github.svg" alt="GitHub">
         </p>
-        <p class="c-skill-icon p-home-skill__icon" data-category="tools">
-          <img src="<?php echo get_template_directory_uri();?>/assets/images/wordpress.svg" alt="WordPress" class="c-skill-icon__image">
+        <p class="p-home-skill__icon" data-category="tools">
+          <img class="p-home-skill__iconImage" src="<?php echo get_template_directory_uri();?>/assets/images/wordpress.svg" alt="WordPress">
         </p>
-        <p class="c-skill-icon p-home-skill__icon" data-category="tools">
-          <img src="<?php echo get_template_directory_uri();?>/assets/images/babel.svg" alt="BABEL" class="c-skill-icon__image">
+        <p class="p-home-skill__icon" data-category="tools">
+          <img class="p-home-skill__iconImage" src="<?php echo get_template_directory_uri();?>/assets/images/babel.svg" alt="BABEL">
         </p>
-        <p class="c-skill-icon p-home-skill__icon" data-category="tools">
-          <img src="<?php echo get_template_directory_uri();?>/assets/images/gulp.svg" alt="Gulp" class="c-skill-icon__image">
+        <p class="p-home-skill__icon" data-category="tools">
+          <img class="p-home-skill__iconImage" src="<?php echo get_template_directory_uri();?>/assets/images/gulp.svg" alt="Gulp">
         </p>
       </div>
     </div>

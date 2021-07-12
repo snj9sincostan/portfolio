@@ -7,63 +7,60 @@
 .p-contact-form {
   max-width: 680px;
   margin: 80px auto 0;
+}
 
-  &__items {
-    margin-bottom: 0;
-    &:not(:first-child) {
-      margin-top: 20px;
-    }
-  }
-  &__title {
-    font-size: 1.6rem;
-    font-weight: bold;
-  }
-  &__input-wrap {
-    margin: 0;
-    &:not(:first-child) {
-      margin-top: 20px;
-    }
-    input,textarea {
-      width: 100%;
-      background-color: $contact_input_color;
-      border: none;
-      border-radius: 2px;
-    }
-    input {
-      height: 38px;
-    }
-    textarea {
-      resize: none;
-      height: 420px;
-      padding: 0;
+.p-contact-form__items {
+  margin-bottom: 0;
+  &:not(:first-child) {
+    margin-top: 20px;
+    @include mq-down(sm) {
+      margin-top: 10px;
     }
   }
 }
 
-.p-contact-button {
+.p-contact-form__title {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.p-contact-form__inputWrap {
+  margin: 0;
+  &:not(:first-child) {
+    margin-top: 20px;
+    @include mq-down(sm) {
+      margin-top: 10px;
+    }
+  }
+}
+
+.p-contact-form__input {
+  height: 38px;
+  width: 100%;
+  background-color: $contact_input_color;
+  border: none;
+  border-radius: 2px;
+}
+
+.p-contact-form__textarea {
+  resize: none;
+  height: 420px;
+  padding: 0;
+  width: 100%;
+  background-color: $contact_input_color;
+  border: none;
+  border-radius: 2px;
+  @include mq-down(sm) {
+    height: 315px;
+  }
+}
+
+.p-contact-form__button {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
   margin-top: 40px;
-}
-
-@media screen and (max-width: 500px) {
-  .p-contact-form {
-
-    &__items:not(:first-child) {
-      margin-top: 10px;
-    }
-
-    &__input-wrap {
-      &:not(:first-child) {
-        margin-top: 10px;
-      }
-      textarea {
-        height: 315px;
-      }
-    }
-  }
-  .p-contact-button {
+  @include mq-down(sm) {
     display: block;
     margin-top: 60px;
     &__fix {
