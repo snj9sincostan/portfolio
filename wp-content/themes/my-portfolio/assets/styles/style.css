@@ -678,45 +678,6 @@ h1, h2, h3, h4, h5, p {
   }
 }
 
-.c-tab {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  width: 100%;
-  max-width: 500px;
-  padding: 0;
-  margin: 0 auto;
-}
-@media screen and (max-width: 500px) {
-  .c-tab {
-    padding: 0 20px;
-  }
-}
-.c-tab__item {
-  border-radius: 9999px;
-  cursor: pointer;
-  font-size: 2.2rem;
-  min-width: 140px;
-  padding: 0 20px;
-  text-align: center;
-  font-weight: bold;
-}
-@media screen and (max-width: 500px) {
-  .c-tab__item {
-    font-size: 1.6rem;
-    min-width: 80px;
-  }
-}
-.c-tab__item.is-active {
-  background-color: #18a0fb;
-  color: #ffffff;
-}
-.c-tab__item:hover {
-  background-color: #18a0fb;
-  color: #ffffff;
-  transition: background-color 0.3s, color 0.3s;
-}
-
 /******************************************************************
 Style: FirstView
 ******************************************************************/
@@ -920,6 +881,46 @@ Style: Skill
   margin: 52px auto 0;
 }
 
+.p-home-skill__tab {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 100%;
+  max-width: 500px;
+  padding: 0;
+  margin: 0 auto;
+}
+@media screen and (max-width: 500px) {
+  .p-home-skill__tab {
+    padding: 0 20px;
+  }
+}
+
+.p-home-skill__tabItem {
+  border-radius: 9999px;
+  cursor: pointer;
+  font-size: 2.2rem;
+  min-width: 140px;
+  padding: 0 20px;
+  text-align: center;
+  font-weight: bold;
+}
+@media screen and (max-width: 500px) {
+  .p-home-skill__tabItem {
+    font-size: 1.6rem;
+    min-width: 80px;
+  }
+}
+.p-home-skill__tabItem.is-active {
+  background-color: #18a0fb;
+  color: #ffffff;
+}
+.p-home-skill__tabItem:hover {
+  background-color: #18a0fb;
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
 .p-home-skill__list {
   display: flex;
   flex-wrap: wrap;
@@ -1012,7 +1013,7 @@ Style: Contact
   color: rgba(52, 131, 225, 0.3);
   font-size: 8rem;
   font-weight: 400;
-  font-family: luxus-brut, cursive;
+  font-family: "luxus-brut", cursive;
   font-style: italic;
 }
 @media screen and (max-width: 500px) {
@@ -1035,12 +1036,6 @@ Style: Contact
   width: 250px;
   margin: 75px auto 0;
   display: block;
-}
-
-.p-contact-text {
-  text-align: center;
-  font-size: 1.6rem;
-  margin-top: 30px;
 }
 
 .p-contact-form {

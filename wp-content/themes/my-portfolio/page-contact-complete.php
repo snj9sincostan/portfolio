@@ -6,7 +6,7 @@
         <?php the_content(); ?>
         <?php endwhile; ?>
       <?php endif; ?>
-      <div class="p-contact-button">
+      <div class="p-complete-button">
         <a class="c-buttonCorrect" href="<?php echo home_url(); ?>">トップへ戻る<span></span></a>
       </div>
     </div>

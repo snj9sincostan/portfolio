@@ -75,10 +75,10 @@
   <section class="p-home-skill" id="skill">
     <h2 class="c-headingPrimary">Skill</h2>
     <div class="p-home-skill__body">
-      <ul class="c-tab animate__animated" id="tab" animation="animate__fadeInUp">
-        <li class="c-tab__item is-active" data-filter="all">All</li>
-        <li class="c-tab__item" data-filter="language">Language</li>
-        <li class="c-tab__item" data-filter="tools">Tools</li>
+      <ul class="p-home-skill__tab animate__animated" id="tab" animation="animate__fadeInUp">
+        <li class="p-home-skill__tabItem is-active" data-filter="all">All</li>
+        <li class="p-home-skill__tabItem" data-filter="language">Language</li>
+        <li class="p-home-skill__tabItem" data-filter="tools">Tools</li>
       </ul>
       <div class="p-home-skill__list animate__animated" id="icons" animation="animate__fadeInUp">
         <p class="p-home-skill__icon" data-category="language">

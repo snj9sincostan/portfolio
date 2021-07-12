@@ -30,7 +30,7 @@
     color: rgba(52, 131, 225, 0.3);
     font-size: 8rem;
     font-weight: 400;
-    font-family: luxus-brut, cursive;
+    font-family: 'luxus-brut', cursive;
     font-style: italic;
     @include mq-down(sm) {
       font-size: 5.5rem;
