@@ -50,18 +50,20 @@ Style: FirstView
   max-width: 695px;
   margin: 0 auto;
   @include mq-down(md) {
-    display: none;
-  }
-}
-
-.p-home-firstview__itemSp {
-  display: none;
-  @include mq-down(md) {
     display: block;
     width: 100%;
     max-width: 300px;
   }
 }
+
+// .p-home-firstview__itemSp {
+//   display: none;
+//   @include mq-down(md) {
+//     display: block;
+//     width: 100%;
+//     max-width: 300px;
+//   }
+// }
 /******************************************************************
 Style: About
 ******************************************************************/
@@ -129,6 +131,22 @@ Style: About
   img {
     display: block;
     border-radius: 9999px;
+  }
+}
+
+.p-home-about__icon.animate__rollIn {
+  animation-name: override-rollIn;
+}
+
+@keyframes override-rollIn {
+  from {
+    opacity: 0;
+    transform: translate3d(200px, 0, 0) rotate3d(0, 0, 2, 120deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 /******************************************************************
@@ -249,6 +267,19 @@ Style: Skill
 
 .p-home-skill__iconImage {
   width: 100%;
+}
+
+.p-home-skill__icon.is-animated {
+  animation: .6s rotate-right;
+}
+
+@keyframes rotate-right {
+  0% {
+    transform: translate(-100%) rotate(-100deg);
+  }
+  100% {
+    transform: none;
+  }
 }
 /******************************************************************
 Style: Contact

@@ -736,15 +736,6 @@ Style: FirstView
 }
 @media screen and (max-width: 768px) {
   .p-home-firstview__itemPc {
-    display: none;
-  }
-}
-
-.p-home-firstview__itemSp {
-  display: none;
-}
-@media screen and (max-width: 768px) {
-  .p-home-firstview__itemSp {
     display: block;
     width: 100%;
     max-width: 300px;
@@ -831,6 +822,20 @@ Style: About
   border-radius: 9999px;
 }
 
+.p-home-about__icon.animate__rollIn {
+  animation-name: override-rollIn;
+}
+
+@keyframes override-rollIn {
+  from {
+    opacity: 0;
+    transform: translate3d(200px, 0, 0) rotate3d(0, 0, 2, 120deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
 /******************************************************************
 Style: Portfolio
 ******************************************************************/
@@ -962,6 +967,18 @@ Style: Skill
   width: 100%;
 }
 
+.p-home-skill__icon.is-animated {
+  animation: 0.6s rotate-right;
+}
+
+@keyframes rotate-right {
+  0% {
+    transform: translate(-100%) rotate(-100deg);
+  }
+  100% {
+    transform: none;
+  }
+}
 /******************************************************************
 Style: Contact
 ******************************************************************/
@@ -1129,37 +1146,6 @@ Style: Contact
   visibility: hidden;
 }
 
-@keyframes override-rollIn {
-  from {
-    opacity: 0;
-    transform: translate3d(200px, 0, 0) rotate3d(0, 0, 2, 120deg);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-.animate__animated.animate__rollIn {
-  animation-name: override-rollIn;
-}
-
-/******************************************************************
-
-Style: Skill_Icon__Animation
-
-******************************************************************/
-.is-animated {
-  animation: 0.6s rotate-right;
-}
-
-@keyframes rotate-right {
-  0% {
-    transform: translate(-100%) rotate(-100deg);
-  }
-  100% {
-    transform: none;
-  }
-}
 .u-screen-whitespace-adjust {
   height: calc(100vh - 70px - 30px);
 }

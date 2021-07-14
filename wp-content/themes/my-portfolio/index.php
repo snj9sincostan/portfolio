@@ -4,8 +4,9 @@
     <div class="p-home-firstview__inner">
       <div class="p-home-firstview__hero">
         <div class="p-home-firstview__hero-item">
-          <div class="p-home-firstview__itemPc" id="catchcopy-pc"></div>
-          <div class="p-home-firstview__itemSp" id="catchcopy-sp"></div>
+          <div class="p-home-firstview__itemPc" id="catchcopy"></div>
+          <!-- <div class="p-home-firstview__itemPc" id="catchcopy-pc"></div>
+          <div class="p-home-firstview__itemSp" id="catchcopy-sp"></div> -->
         </div>
       </div>
     </div>
