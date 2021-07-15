@@ -364,6 +364,10 @@ html {
   font-family: YuGothic, "Yu Gothic", sans-serif;
 }
 
+body {
+  font-size: 1.6rem;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -1090,6 +1094,9 @@ Style: Contact
   width: 56px;
   margin-left: 15px;
 }
+.mw_wp_form_confirm .p-contact-form__required {
+  display: none;
+}
 
 .p-contact-form__inputWrap {
   margin: 0;
@@ -1144,10 +1151,6 @@ Style: Contact
 
 .p-complete-button {
   margin-top: 70px;
-}
-
-.u-fz-16 {
-  font-size: 1.6rem;
 }
 
 .u-invisible {
