@@ -7,7 +7,7 @@
         <?php endwhile; ?>
       <?php endif; ?>
       <div class="p-complete-button">
-        <a class="c-buttonCorrect" href="<?php echo home_url(); ?>">トップへ戻る<span></span></a>
+        <a class="c-button--correct" href="<?php echo home_url(); ?>">トップへ戻る<span></span></a>
       </div>
     </div>
   </main>

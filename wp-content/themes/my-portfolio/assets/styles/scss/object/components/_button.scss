@@ -5,7 +5,7 @@
   padding: 5px 0px;
   font-size: 1.6rem;
   cursor: pointer;
-  a {
+  &__link {
     text-decoration: none;
     color: $color_white;
     display: block;
@@ -15,46 +15,48 @@
   }
 }
 
-.c-buttonCorrect {
-  margin: 0 auto;
-  display: block;
-  width: 250px;
-  height: 30px;
-  border: 1px solid $button_correct;
-  color: $button_correct;
-  font-size: 1.8rem;
-  text-align: center;
-  background-color: transparent;
-  cursor: pointer;
+.c-button {
+  &--correct {
+    margin: 0 auto;
+    display: block;
+    width: 250px;
+    height: 30px;
+    border: 1px solid $button_correct;
+    color: $button_correct;
+    font-size: 1.8rem;
+    text-align: center;
+    background-color: transparent;
+    cursor: pointer;
 
-  padding: 0;
-  transition: all .4s;
-  &:hover {
+    padding: 0;
     transition: all .4s;
-    color: $color_white;
-    background-color: $button_correct;
+    &:hover {
+      transition: all .4s;
+      color: $color_white;
+      background-color: $button_correct;
+    }
+
+    &:active {
+      background-color: $button_correct;
+    }
   }
 
-  &:active {
-    background-color: $button_correct;
-  }
-}
+  &--fix {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    text-decoration: underline;
+    color: rgba(0, 0, 0, 0.7);
+    width: 250px;
+    background-color: transparent;
+    border: none;
+    display: block;
+    width: 250px;
+    padding: 0;
+    cursor: pointer;
 
-.c-buttonFix {
-  text-align: center;
-  margin: 0 auto;
-  font-size: 1.8rem;
-  text-decoration: underline;
-  color: rgba(0, 0, 0, 0.7);
-  width: 250px;
-  background-color: transparent;
-  border: none;
-  display: block;
-  width: 250px;
-  padding: 0;
-  cursor: pointer;
-
-  &:hover {
-    opacity: 0.8;
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }

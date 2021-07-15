@@ -47,7 +47,7 @@ Template Name: portfolio
     <?php endwhile; ?>
     <?php endif; ?>
     <button class="c-buttonPrimary p-page-portfolio__button">
-      <a href="<?php echo home_url(); ?>">トップへ戻る</a>
+      <a class="c-buttonPrimary__link" href="<?php echo home_url(); ?>">トップへ戻る</a>
     </button>
   </div>
 </main>

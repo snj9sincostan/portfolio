@@ -4,9 +4,8 @@
     <div class="p-home-firstview__inner">
       <div class="p-home-firstview__hero">
         <div class="p-home-firstview__hero-item">
-          <div class="p-home-firstview__itemPc" id="catchcopy"></div>
-          <!-- <div class="p-home-firstview__itemPc" id="catchcopy-pc"></div>
-          <div class="p-home-firstview__itemSp" id="catchcopy-sp"></div> -->
+          <div class="p-home-firstview__itemPc" id="catchcopy-pc"></div>
+          <div class="p-home-firstview__itemSp" id="catchcopy-sp"></div>
         </div>
       </div>
     </div>
@@ -28,47 +27,47 @@
         </div>
       </div>
       <p class="p-home-about__icon animate__animated" animation="animate__rollIn">
-        <img src="<?php echo get_template_directory_uri();?>/assets/images/icon.png" alt="西原伸治">
+        <img class="p-home-about__iconImage" src="<?php echo get_template_directory_uri();?>/assets/images/icon.png" alt="西原伸治">
       </p>
     </div>
   </section>
   <section class="p-home-portfolio" id="portfolio">
     <h2 class="c-headingPrimary">Portfolio</h2>
     <div class="p-home-portfolio__inner">
-      <div class="c-card p-home-portfolio__card animate__animated" animation="animate__fadeInUp">
-        <p class="c-card__image">
-          <img src="<?php echo get_template_directory_uri();?>/assets/images/Hero.png" alt="">
+      <div class="p-home-portfolio__card animate__animated" animation="animate__fadeInUp">
+        <p class="p-home-portfolio__cardImageWrap">
+          <img class="p-home-portfolio__cardImage" src="<?php echo get_template_directory_uri();?>/assets/images/Hero.png" alt="">
         </p>
-        <h3 class="c-card__title">ポートフォリオ名</h3>
-        <p class="c-card__text">
+        <h3 class="p-home-portfolio__cardTitle">ポートフォリオ名</h3>
+        <p class="p-home-portfolio__cardText">
           テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、
         </p>
         <button class="c-buttonPrimary p-home-portfolio__button">
-          <a href="<?php echo home_url('/portfolio'); ?>">Show more</a>
+          <a class="c-buttonPrimary__link" href="<?php echo home_url('/portfolio'); ?>">Show more</a>
         </button>
       </div>
-      <div class="c-card p-home-portfolio__card animate__animated" animation="animate__fadeInUp">
-        <p class="c-card__image">
-          <img src="<?php echo get_template_directory_uri();?>/assets/images/Hero.png" alt="">
+      <div class="p-home-portfolio__card animate__animated" animation="animate__fadeInUp">
+        <p class="p-home-portfolio__cardImageWrap">
+          <img class="p-home-portfolio__cardImage" src="<?php echo get_template_directory_uri();?>/assets/images/Hero.png" alt="">
         </p>
-        <h3 class="c-card__title">ポートフォリオ名</h3>
-        <p class="c-card__text">
+        <h3 class="p-home-portfolio__cardTitle">ポートフォリオ名</h3>
+        <p class="p-home-portfolio__cardText">
           テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、
         </p>
         <button class="c-buttonPrimary p-home-portfolio__button">
-          <a href="<?php echo home_url('/portfolio2'); ?>">Show more</a>
+          <a class="c-buttonPrimary__link" href="<?php echo home_url('/portfolio2'); ?>">Show more</a>
         </button>
       </div>
-      <div class="c-card p-home-portfolio__card animate__animated" animation="animate__fadeInUp">
-        <p class="c-card__image">
-          <img src="<?php echo get_template_directory_uri();?>/assets/images/Hero.png" alt="">
+      <div class="p-home-portfolio__card animate__animated" animation="animate__fadeInUp">
+        <p class="p-home-portfolio__cardImageWrap">
+          <img class="p-home-portfolio__cardImage" src="<?php echo get_template_directory_uri();?>/assets/images/Hero.png" alt="">
         </p>
-        <h3 class="c-card__title">ポートフォリオ名</h3>
-        <p class="c-card__text">
+        <h3 class="p-home-portfolio__cardTitle">ポートフォリオ名</h3>
+        <p class="p-home-portfolio__cardText">
           テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、
         </p>
         <button class="c-buttonPrimary p-home-portfolio__button">
-          <a href="<?php echo home_url('/portfolio3'); ?>">Show more</a>
+          <a class="c-buttonPrimary__link" href="<?php echo home_url('/portfolio3'); ?>">Show more</a>
         </button>
       </div>
     </div>
@@ -118,7 +117,7 @@
   <section class="p-home-contact" id="contact">
     <h2 class="c-headingPrimary">Contact</h2>
     <button class="c-buttonPrimary p-home-contact__button">
-      <a href="<?php echo home_url('/contact'); ?>">Contact</a>
+      <a class="c-buttonPrimary__link" href="<?php echo home_url('/contact'); ?>">Contact</a>
     </button>
   </section>
 </main>

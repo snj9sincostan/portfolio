@@ -24,7 +24,6 @@
 // -----------------------------------------------------------------
 
 @import "./scss/object/components/button";
-@import "./scss/object/components/card";
 @import "./scss/object/components/contactText";
 @import "./scss/object/components/heading";
 
@@ -35,6 +34,7 @@
 @import "./scss/object/project/home";
 @import "./scss/object/project/page-portfolio";
 @import "./scss/object/project/contact";
+@import "./scss/object/project/complete";
 
 // -----------------------------------------------------------------
 // Utility
@@ -42,7 +42,5 @@
 
 @import "./scss/object//utility/confirm-font";
 @import "./scss/object//utility/invisible";
-// @import "./scss/object//utility/rolin-override";
 @import "./scss/object//utility/screen-whitespace-adjust";
 @import "./scss/object//utility/scroll-lock";
-// @import "./scss/object//utility/sa";

@@ -15,15 +15,8 @@ const initVivus = () => {
     animTimingFunction: Vivus.EASE
   };
 
-  const newVivusProperty = (matchMedia('only screen and (max-width: 768px)').matches) ? vivusPropertySp : vivusProperty;
-  // if (matchMedia('only screen and (max-width: 768px)').matches) {
-  // //スマホ・タブレットの時の処理
-  // new Vivus('catchcopy-sp', vivusPropertySp)
-  // }else{
-  // //PCの時の処理
-  // new Vivus('catchcopy-pc', vivusProperty);
-  // }
-new Vivus('catchcopy', newVivusProperty);
+    new Vivus('catchcopy-pc', vivusProperty);
+    new Vivus('catchcopy-sp', vivusPropertySp)
 }
 
 initVivus();

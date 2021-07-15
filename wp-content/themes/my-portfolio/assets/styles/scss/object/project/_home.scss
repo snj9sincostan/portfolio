@@ -50,20 +50,18 @@ Style: FirstView
   max-width: 695px;
   margin: 0 auto;
   @include mq-down(md) {
+    display: none;
+  }
+}
+
+.p-home-firstview__itemSp {
+  display: none;
+  @include mq-down(md) {
     display: block;
     width: 100%;
     max-width: 300px;
   }
 }
-
-// .p-home-firstview__itemSp {
-//   display: none;
-//   @include mq-down(md) {
-//     display: block;
-//     width: 100%;
-//     max-width: 300px;
-//   }
-// }
 /******************************************************************
 Style: About
 ******************************************************************/
@@ -128,10 +126,11 @@ Style: About
     margin: 20px auto 0;
     width: 200px;
   }
-  img {
-    display: block;
-    border-radius: 9999px;
-  }
+}
+
+.p-home-about__iconImage {
+  display: block;
+  border-radius: 9999px;
 }
 
 .p-home-about__icon.animate__rollIn {
@@ -168,15 +167,73 @@ Style: Portfolio
 }
 
 .p-home-portfolio__card {
-  @include mq-down(md) {
-    margin: 0 auto;
-  }
-  &:not(:first-child) {
-    margin-left: 50px;
-    @include mq-down(md) {
-      margin: 40px auto 0;
+  border-right-color: $color_white;
+  border: none;
+  box-shadow: 2px 2px 6px 0 rgba(0,0,0,0.3);
+  border-radius: 20px;
+  text-align: center;
+  width: 255px;
+  height: 316px;
+  transition: transform 0.3s;
+  background-color: $color_white;
+  padding-bottom: 15px;
+
+  @include mq-up(md) {
+    &.animate__fadeInUp {
+      &:nth-of-type(2) {
+        animation-delay: .3s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: .6s;
+      }
+    }
+    &:not(:first-child) {
+      margin-left: 50px;
     }
   }
+  @include mq-down(md) {
+    margin: 0 auto;
+    .animate__fadeInUp {
+      &:nth-of-type(2) {
+        animation-delay: .3s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: .3s;
+      }
+    }
+    &:not(:first-child) {
+      margin-top: 40px;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 2px 2px 26px 0px rgba(0,0,0,0.3);
+  }
+}
+
+.p-home-portfolio__cardImage {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.p-home-portfolio__cardTitle {
+  min-width: 190px;
+  font-size: 2.4rem;
+  padding: 10px 5px 0;
+  text-align: center;
+}
+
+.p-home-portfolio__cardText {
+  padding: 0px 20px;
+  font-size: 1.2rem;
+  letter-spacing: 1.2;
+  height: 64px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
 .p-home-portfolio__button {
