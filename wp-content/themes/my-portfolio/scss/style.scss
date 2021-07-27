@@ -2,18 +2,18 @@
 // Foundation
 // ==========================================================================
 
-@import "./scss/foundation/reset";
-@import "./scss/foundation/base";
-@import "./scss/foundation/variables";
-@import "./scss/foundation/mixin";
+@import "./foundation/reset";
+@import "./foundation/base";
+@import "./foundation/variables";
+@import "./foundation/mixin";
 
 // ==========================================================================
 // Layout
 // ==========================================================================
 
-@import "./scss/layout/header";
-@import "./scss/layout/footer";
-@import "./scss/layout/contact-wrap";
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/contact-wrap";
 
 // ==========================================================================
 // Object
@@ -23,23 +23,23 @@
 // Component
 // -----------------------------------------------------------------
 
-@import "./scss/object/components/button";
-@import "./scss/object/components/contactText";
-@import "./scss/object/components/heading";
+@import "./object/components/button";
+@import "./object/components/contactText";
+@import "./object/components/heading";
 
 // -----------------------------------------------------------------
 // Project
 // -----------------------------------------------------------------
 
-@import "./scss/object/project/home";
-@import "./scss/object/project/page-portfolio";
-@import "./scss/object/project/contact";
-@import "./scss/object/project/complete";
+@import "./object/project/home";
+@import "./object/project/portfolio";
+@import "./object/project/contact";
+@import "./object/project/complete";
 
 // -----------------------------------------------------------------
 // Utility
 // -----------------------------------------------------------------
 
-@import "./scss/object//utility/invisible";
-@import "./scss/object//utility/screen-whitespace-adjust";
-@import "./scss/object//utility/scroll-lock";
+@import "./object//utility/invisible";
+@import "./object//utility/screen-whitespace-adjust";
+@import "./object//utility/scroll-lock";
