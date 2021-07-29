@@ -853,6 +853,7 @@ Style: Portfolio
 .p-home-portfolio__cardImage {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  height: 150px;
 }
 
 .p-home-portfolio__cardTitle {
@@ -863,7 +864,7 @@ Style: Portfolio
 }
 
 .p-home-portfolio__cardText {
-  padding: 0px 20px;
+  padding: 0 20px;
   font-size: 1.2rem;
   letter-spacing: 1.2;
   height: 64px;
@@ -876,7 +877,7 @@ Style: Portfolio
 
 .p-home-portfolio__button {
   width: 180px;
-  margin: 0 auto;
+  margin: 5px auto 0;
 }
 
 /******************************************************************

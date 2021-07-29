@@ -50,10 +50,38 @@ function register_nav() {
   ));
 }
 
+function sub_loop() {
+  $args = array(
+    'post_type' => 'portfolio',
+    'post_per_page' => 3,
+  );
+  $the_query = new WP_Query($args);
+  return $the_query;
+}
+
+function show_portfolio_image() {
+  $image = get_field('portfolio-img');
+  if($image){
+    $url = $image['url'];
+    $imageAlt = $image['alt'];
+    $size = 'thumbnail';
+    $imageThumb = $image['sizes'][ $size ];
+    echo '<img src="'.$imageThumb.'" alt="'.$imageAlt.'">';
+  }
+}
+
+function show_as_excerpt() {
+  $s = the_field('portfolio-description');
+  $text = mb_substr($s,0,10,'UTF-8');
+  echo $text.'...';
+}
+
 function init() {
   register_nav();
+  // add_custom_post_type();
   add_action('wp_enqueue_scripts','not_load_default_jquery');
   add_action('wp_enqueue_scripts','read_assets');
+  add_theme_support('post-thumbnails');
 }
 
 init();

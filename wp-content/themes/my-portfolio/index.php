@@ -34,42 +34,30 @@
   <section class="p-home-portfolio" id="portfolio">
     <h2 class="c-heading">Portfolio</h2>
     <div class="p-home-portfolio__inner">
-      <div class="p-home-portfolio__card animate__animated" animation="animate__fadeInUp">
-        <p class="p-home-portfolio__cardImageWrap">
-          <img class="p-home-portfolio__cardImage" src="<?php echo get_template_directory_uri();?>/assets/images/hero.png" alt="ポートフォリオサムネイル">
-        </p>
-        <h3 class="p-home-portfolio__cardTitle">ポートフォリオ名</h3>
-        <p class="p-home-portfolio__cardText">
-          テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、
-        </p>
-        <div class="c-buttonPrimary p-home-portfolio__button">
-          <a class="c-buttonPrimary__link" href="<?php echo home_url('/portfolio'); ?>">Show more</a>
+      <?php
+        $my_query = sub_loop();
+
+        if ($my_query->have_posts()):
+          while ($my_query->have_posts()):
+            $my_query->the_post();
+      ;?>
+        <div class="p-home-portfolio__card animate__animated" animation="animate__fadeInUp">
+          <p class="p-home-portfolio__cardImageWrap">
+            <?php the_post_thumbnail("", array('class' => 'p-home-portfolio__cardImage'));?>
+          </p>
+          <h3 class="p-home-portfolio__cardTitle"><?php the_title();?></h3>
+          <p class="p-home-portfolio__cardText">
+            <?php show_as_excerpt();?>
+          </p>
+          <div class="c-buttonPrimary p-home-portfolio__button">
+            <a class="c-buttonPrimary__link" href="<?php the_permalink(); ?>">Show more</a>
+          </div>
         </div>
-      </div>
-      <div class="p-home-portfolio__card animate__animated" animation="animate__fadeInUp">
-        <p class="p-home-portfolio__cardImageWrap">
-          <img class="p-home-portfolio__cardImage" src="<?php echo get_template_directory_uri();?>/assets/images/hero.png" alt="ポートフォリオサムネイル">
-        </p>
-        <h3 class="p-home-portfolio__cardTitle">ポートフォリオ名</h3>
-        <p class="p-home-portfolio__cardText">
-          テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、
-        </p>
-        <div class="c-buttonPrimary p-home-portfolio__button">
-          <a class="c-buttonPrimary__link" href="<?php echo home_url('/portfolio2'); ?>">Show more</a>
-        </div>
-      </div>
-      <div class="p-home-portfolio__card animate__animated" animation="animate__fadeInUp">
-        <p class="p-home-portfolio__cardImageWrap">
-          <img class="p-home-portfolio__cardImage" src="<?php echo get_template_directory_uri();?>/assets/images/hero.png" alt="ポートフォリオサムネイル">
-        </p>
-        <h3 class="p-home-portfolio__cardTitle">ポートフォリオ名</h3>
-        <p class="p-home-portfolio__cardText">
-          テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、テキスト、
-        </p>
-        <div class="c-buttonPrimary p-home-portfolio__button">
-          <a class="c-buttonPrimary__link" href="<?php echo home_url('/portfolio3'); ?>">Show more</a>
-        </div>
-      </div>
+      <?php
+        endwhile;
+      endif;
+      wp_reset_postdata();
+      ?>
     </div>
   </section>
   <section class="p-home-skill" id="skill">
