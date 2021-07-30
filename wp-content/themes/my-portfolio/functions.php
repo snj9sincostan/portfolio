@@ -78,7 +78,6 @@ function show_as_excerpt() {
 
 function init() {
   register_nav();
-  // add_custom_post_type();
   add_action('wp_enqueue_scripts','not_load_default_jquery');
   add_action('wp_enqueue_scripts','read_assets');
   add_theme_support('post-thumbnails');
