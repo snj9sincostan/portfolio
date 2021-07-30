@@ -71,8 +71,8 @@ function show_portfolio_image() {
 }
 
 function show_as_excerpt() {
-  $s = the_field('portfolio-description');
-  $text = mb_substr($s,0,10,'UTF-8');
+  $s = get_field('portfolio-description');
+  $text = mb_substr($s,0,50,'UTF-8');
   echo $text.'...';
 }
 
