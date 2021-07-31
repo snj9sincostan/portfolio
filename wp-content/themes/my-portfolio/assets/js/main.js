@@ -1,11 +1,12 @@
 jQuery(document).ready(() => {
 
-
   const smoothScroll = ()=> {
     const speed = 700;
     const headerHeight = $('.l-header').outerHeight();
-    $('a[href*="#"]').click(function(){
-      let href= $(this).attr("href");
+    const $headerLink = $('a[href*="#"]');
+    $headerLink.on('click', (event) => {
+      const $this = $(event.currentTarget);
+      let href= $this.attr("href");
       const developmentUrl = `${location.protocol}//${location.hostname}:8888${location.pathname}`;
       const productionUrl = `${location.protocol}//${location.hostname}${location.pathname}`;
       const url = (location.href === 'localhost:8888') ? productionUrl : developmentUrl;
@@ -17,7 +18,7 @@ jQuery(document).ready(() => {
   }
 
   const addHeaderStyle = () => {
-    const $window = $(window)
+    const $window = $(window);
     const $header = $('.l-header');
     const $firstView = $('#firstview');
     const $firstViewHeight = $firstView.outerHeight();
@@ -41,65 +42,65 @@ jQuery(document).ready(() => {
     const $header = $('.l-header');
     const $burgerIcon = $('.l-header__burger');
     const $headerNav = $('.l-header__nav');
-    const $navItem = $('.l-header__item')
+    const $navItem = $('.l-header__item');
 
     const clickCloseNavMenu = () => {
       $burgerIcon.trigger('click');
     }
 
-    $burgerIcon.on('click', () => {
+    const init = () => {
       $body.toggleClass('u-no-scroll');
       $burgerIcon.toggleClass('is-open');
       $headerNav.toggleClass('is-show');
       $header.toggleClass('is-active');
       $navItem.on('click', clickCloseNavMenu);
-    });
+    }
+    $burgerIcon.on('click', init);
   }
 
   const changeSkillPanel = () => {
     const $tabDataFilter = $('#tab [data-filter]');
     const $skillIconCategory = $('#icons [data-category]');
 
-    $tabDataFilter.on('click', function(e) {
-      e.preventDefault();
-      const $this = $(this);
+    const s = (event) => {
+      event.preventDefault();
+      const $this = $(event.currentTarget);
       $tabDataFilter.removeClass('is-active');
       $this.addClass('is-active');
-
       const $activeTabHaveDataFilter = $this.attr('data-filter');
-
       if ($activeTabHaveDataFilter == 'all') {
-        $skillIconCategory.removeClass('is-animated')
-        .fadeOut().promise().done(() => {
+        $skillIconCategory.removeClass('is-animated').fadeOut().promise().done(() => {
           $skillIconCategory.addClass('is-animated').fadeIn();
         });
       } else {
-        $skillIconCategory.removeClass('is-animated')
-        .fadeOut().promise().done(() => {
-          $skillIconCategory.filter(`[data-category = "${$activeTabHaveDataFilter}"]`)
-          .addClass('is-animated').fadeIn();
-        })
+        $skillIconCategory.removeClass('is-animated').fadeOut().promise().done(() => {
+          $skillIconCategory.filter(`[data-category = "${$activeTabHaveDataFilter}"]`).addClass('is-animated').fadeIn();
+        });
       }
-    });
+    }
+
+    $tabDataFilter.on('click', s);
   }
 
-  const addAnimationStyle = () => {
+  const showAnimation = () => {
     const $window = $(window);
-    const $animationAttributeHaveElements = $('*[animation]');
+    const $animationAttributeHaveElements = $('[animation]');
     $animationAttributeHaveElements.addClass('u-invisible');
 
-    $window.on('scroll',() => {
-      $animationAttributeHaveElements.each(function () {
-        const elementPosition = $(this).offset().top;
-        const scroll = $(window).scrollTop();
-        const position = elementPosition - (window.innerHeight * 2) / 3;
-
-        if (this.hasAttribute('animation') && (scroll > position)) {
-          const animation = this.getAttribute('animation');
-          $(this).removeClass('u-invisible').addClass(animation);
+    const addAnimationStyle = () => {
+      $animationAttributeHaveElements.each((index, element) => {
+        const $this = $(element);
+        const $element = $(element)[0];
+        const elementPosition = $this .offset().top;
+        const scroll = $window.scrollTop();
+        const position = elementPosition - (window.innerHeight * 2)/5;
+        if ($element.hasAttribute('animation') && (scroll > position)) {
+          const animation = $element.getAttribute('animation');
+          $this.removeClass('u-invisible').addClass(animation);
         }
       });
-    });
+    }
+    $window.on('scroll', addAnimationStyle);
   }
 
   const init = () => {
@@ -107,7 +108,7 @@ jQuery(document).ready(() => {
     changeSkillPanel();
     smoothScroll();
     addHeaderStyle();
-    addAnimationStyle();
+    showAnimation();
   }
   init();
 });
