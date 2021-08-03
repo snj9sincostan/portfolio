@@ -4,7 +4,8 @@ jQuery(document).ready(() => {
     const speed = 700;
     const headerHeight = $('.l-header').outerHeight();
     const $headerLink = $('a[href*="#"]');
-    $headerLink.on('click', (event) => {
+
+    const init = (event) => {
       const $this = $(event.currentTarget);
       let href= $this.attr("href");
       const developmentUrl = `${location.protocol}//${location.hostname}:8888${location.pathname}`;
@@ -14,7 +15,9 @@ jQuery(document).ready(() => {
       const target = $(href == "#" || href == "" ? 'html' : href);
       const position = target.offset().top - headerHeight;
       $("html, body").animate({scrollTop:position }, speed, "swing");
-    });
+    }
+
+    $headerLink.on('click', init);
   }
 
   const addHeaderStyle = () => {
@@ -25,7 +28,7 @@ jQuery(document).ready(() => {
     const fixed = 'is-fixed';
     const headerHeight = 70;
 
-    const toggleClass = () => {
+    const init = () => {
       const value = $window.scrollTop();
       if ($firstViewHeight - headerHeight <= value) {
         $header.addClass(fixed);
@@ -34,7 +37,7 @@ jQuery(document).ready(() => {
       }
     }
 
-    $window.on('scroll', toggleClass);
+    $window.on('scroll', init);
   }
 
   const changeBurgerMenu = () => {
@@ -55,6 +58,7 @@ jQuery(document).ready(() => {
       $header.toggleClass('is-active');
       $navItem.on('click', clickCloseNavMenu);
     }
+
     $burgerIcon.on('click', init);
   }
 
@@ -62,7 +66,7 @@ jQuery(document).ready(() => {
     const $tabDataFilter = $('#tab [data-filter]');
     const $skillIconCategory = $('#icons [data-category]');
 
-    const s = (event) => {
+    const init = (event) => {
       event.preventDefault();
       const $this = $(event.currentTarget);
       $tabDataFilter.removeClass('is-active');
@@ -79,7 +83,7 @@ jQuery(document).ready(() => {
       }
     }
 
-    $tabDataFilter.on('click', s);
+    $tabDataFilter.on('click', init);
   }
 
   const showAnimation = () => {
@@ -100,6 +104,7 @@ jQuery(document).ready(() => {
         }
       });
     }
+
     $window.on('scroll', addAnimationStyle);
   }
 
