@@ -26,7 +26,7 @@
           <p>ボウリング/ダーツ/ゲーム/料理</p>
         </div>
       </div>
-      <p class="p-home-about__icon animate__animated" animation="animate__rollIn">
+      <p class="p-home-about__icon animate__animated" animation="animate__zoomIn">
         <img class="p-home-about__iconImage" src="<?php echo get_template_directory_uri();?>/assets/images/icon.png" alt="西原伸治">
       </p>
     </div>

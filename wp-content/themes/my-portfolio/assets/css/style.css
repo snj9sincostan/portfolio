@@ -778,20 +778,6 @@ Style: About
   border-radius: 9999px;
 }
 
-.p-home-about__icon.animate__rollIn {
-  animation-name: override-rollIn;
-}
-
-@keyframes override-rollIn {
-  from {
-    opacity: 0;
-    transform: translate3d(200px, 0, 0) rotate3d(0, 0, 2, 120deg);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
 /******************************************************************
 Style: Portfolio
 ******************************************************************/
