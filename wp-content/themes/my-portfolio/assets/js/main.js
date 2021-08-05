@@ -1,23 +1,14 @@
 jQuery(document).ready(() => {
 
-  const smoothScroll = ()=> {
-    const speed = 700;
-    const headerHeight = $(".l-header").outerHeight();
+  const smoothScroll = () => {
     const $headerLink = $(`a[href*="#"]`);
-
-    const init = (event) => {
-      const $this = $(event.currentTarget);
-      let href= $this.attr("href");
-      const developmentUrl = `${location.protocol}//${location.hostname}:8888${location.pathname}`;
-      const productionUrl = `${location.protocol}//${location.hostname}${location.pathname}`;
-      const url = (location.href === "localhost:8888") ? productionUrl : developmentUrl;
-      href = href.replace(url, "");
-      const target = $(href == "#" || href == "" ? "html" : href);
-      const position = target.offset().top - headerHeight;
-      $("html, body").animate({scrollTop:position }, speed, "swing");
+    const property = {
+      speed: 900,
+      header: ".l-header"
     }
+    const scrollAction = new SmoothScroll('a[href*="#"]', property);
 
-    $headerLink.on("click", init);
+    $headerLink.on("click", scrollAction);
   }
 
   const addHeaderStyle = () => {
@@ -37,7 +28,7 @@ jQuery(document).ready(() => {
       }
     }
 
-    $window.on("scroll", init);
+    $window.on("scroll load", init);
   }
 
   const changeBurgerMenu = () => {
@@ -105,7 +96,7 @@ jQuery(document).ready(() => {
       });
     }
 
-    $window.on("scroll", addAnimationStyle);
+    $window.on("scroll load", addAnimationStyle);
   }
 
   const init = () => {

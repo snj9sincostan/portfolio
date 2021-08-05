@@ -20,6 +20,13 @@ function read_assets() {
     true
   );
   wp_enqueue_script(
+    'smooth-scroll',
+    '//cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js',
+    array(),
+    '15.0.0',
+    true
+  );
+  wp_enqueue_script(
     'main-js',
     get_template_directory_uri().'/assets/js/main.js',
     '',

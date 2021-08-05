@@ -1,5 +1,5 @@
 <?php get_header();?>
-<main class="l-main">
+<main class="l-main" id="js-top">
   <section class="p-home-firstview" id="firstview">
     <div class="p-home-firstview__inner">
       <div class="p-home-firstview__hero">
