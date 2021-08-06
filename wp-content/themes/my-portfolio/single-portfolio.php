@@ -28,8 +28,8 @@
     </div>
     <?php endwhile; ?>
     <?php endif; ?>
-    <div class="c-buttonPrimary p-portfolio__button">
-      <a class="c-buttonPrimary__link" href="<?php echo home_url(); ?>">トップへ戻る</a>
+    <div class="c-button p-portfolio__button">
+      <a href="<?php echo home_url(); ?>">トップへ戻る</a>
     </div>
   </div>
 </main>

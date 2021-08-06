@@ -49,8 +49,8 @@
           <p class="p-home-portfolio__cardText">
             <?php show_as_excerpt();?>
           </p>
-          <div class="c-buttonPrimary p-home-portfolio__button">
-            <a class="c-buttonPrimary__link" href="<?php the_permalink(); ?>">Show more</a>
+          <div class="c-button p-home-portfolio__button">
+            <a href="<?php the_permalink(); ?>">Show more</a>
           </div>
         </div>
       <?php
@@ -104,8 +104,8 @@
   </section>
   <section class="p-home-contact" id="contact">
     <h2 class="c-heading">Contact</h2>
-    <div class="c-buttonPrimary p-home-contact__button">
-      <a class="c-buttonPrimary__link" href="<?php echo home_url('/contact'); ?>">Contact</a>
+    <div class="c-button p-home-contact__button">
+      <a href="<?php echo home_url('/contact'); ?>">Contact</a>
     </div>
   </section>
 </main>

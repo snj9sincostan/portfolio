@@ -86,7 +86,7 @@ jQuery(document).ready(() => {
       $animationAttributeHaveElements.each((index, element) => {
         const $this = $(element);
         const $element = $(element)[0];
-        const elementPosition = $this .offset().top;
+        const elementPosition = $this.offset().top;
         const scroll = $window.scrollTop();
         const position = elementPosition - (window.innerHeight * 2) / 4;
         if ($element.hasAttribute("animation") && (scroll > position)) {

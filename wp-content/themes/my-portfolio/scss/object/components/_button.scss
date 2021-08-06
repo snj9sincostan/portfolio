@@ -1,21 +1,16 @@
-.c-buttonPrimary {
+.c-button {
   background-color: $color_skyblue;
   border-radius: 9999px;
   border: none;
   padding: 5px 0px;
   font-size: 1.6rem;
   cursor: pointer;
-  &__link {
-    text-decoration: none;
-    color: $color_white;
-    display: block;
-  }
+  color: $color_white;
+  display: block;
   &:hover {
     opacity: 0.8;
   }
-}
 
-.c-button {
   &--correct {
     margin: 0 auto;
     display: block;

@@ -13,7 +13,6 @@
 
 @import "./layout/header";
 @import "./layout/footer";
-@import "./layout/contact-wrap";
 
 // ==========================================================================
 // Object
@@ -24,7 +23,6 @@
 // -----------------------------------------------------------------
 
 @import "./object/components/button";
-@import "./object/components/contactText";
 @import "./object/components/heading";
 
 // -----------------------------------------------------------------
@@ -34,6 +32,7 @@
 @import "./object/project/home";
 @import "./object/project/portfolio";
 @import "./object/project/contact";
+@import "./object/project/confirm";
 @import "./object/project/complete";
 
 // -----------------------------------------------------------------
@@ -41,5 +40,4 @@
 // -----------------------------------------------------------------
 
 @import "./object//utility/invisible";
-@import "./object//utility/screen-whitespace-adjust";
 @import "./object//utility/scroll-lock";

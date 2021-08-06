@@ -1,6 +1,6 @@
 <?php get_header();?>
   <main class="l-main">
-    <div class="l-contact-wrap u-screen-whitespace-adjust">
+    <div class="p-complete-wrap">
       <h2 class="c-heading">Contact</h2>
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <?php the_content(); ?>
