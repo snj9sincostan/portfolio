@@ -13,7 +13,7 @@
     <div class="l-header__inner">
       <h1 class="l-header__logo">
         <a href="<?php echo home_url(); ?>">
-          <svg><use xlink:href="<?php echo get_template_directory_uri();?>/assets/images/animated/splice.svg#logo"/></svg>
+          <svg><use xlink:href="<?php echo get_template_directory_uri();?>/assets/images/animated/instance.svg#logo"/></svg>
         </a>
       </h1>
       <?php
