@@ -408,12 +408,11 @@ h1, h2, h3, h4, h5, p {
   background-color: #ffffff;
   transition: all 0.3s;
 }
-.l-header.is-fixed .l-header__burgerLine {
-  background-color: #000000;
-  transition: all 0.3s;
-}
 .l-header.is-sticky {
   position: sticky;
+  color: #000000;
+  background-color: #ffffff;
+  transition: all 0.3s;
 }
 
 .l-header__inner {
@@ -508,12 +507,16 @@ h1, h2, h3, h4, h5, p {
   }
 }
 
-.l-header__burgerLine.is-sticky {
+.l-header__burgerLineTop.is-fixed {
+  background-color: #000000;
+  transition: all 0.3s;
+}
+.l-header__burgerLineTop.is-sticky {
   background-color: #000000;
   transition: all 0.3s;
 }
 @media screen and (max-width: 768px) {
-  .l-header__burgerLine {
+  .l-header__burgerLineTop {
     background-color: #ffffff;
     width: 35px;
     height: 2px;
@@ -521,19 +524,55 @@ h1, h2, h3, h4, h5, p {
     margin-bottom: 9px;
     transition: transform 0.3s;
   }
-  .l-header__burgerLine:last-child {
-    margin-bottom: 0;
-  }
-  .is-open .l-header__burgerLine {
+  .l-header__burgerLineTop.is-open {
     background-color: #000000;
-  }
-  .is-open .l-header__burgerLine:nth-child(1) {
     transform: translateY(11px) rotate(135deg);
   }
-  .is-open .l-header__burgerLine:nth-child(2) {
+}
+
+.l-header__burgerLineMiddle.is-fixed {
+  background-color: #000000;
+  transition: all 0.3s;
+}
+.l-header__burgerLineMiddle.is-sticky {
+  background-color: #000000;
+  transition: all 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .l-header__burgerLineMiddle {
+    background-color: #ffffff;
+    width: 35px;
+    height: 2px;
+    display: block;
+    margin-bottom: 9px;
+    transition: transform 0.3s;
+  }
+  .l-header__burgerLineMiddle.is-open {
+    background-color: #000000;
     transform: translateX(-18px) scaleX(0);
   }
-  .is-open .l-header__burgerLine:nth-child(3) {
+}
+
+.l-header__burgerLineBottom.is-fixed {
+  background-color: #000000;
+  transition: all 0.3s;
+}
+.l-header__burgerLineBottom.is-sticky {
+  background-color: #000000;
+  transition: all 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .l-header__burgerLineBottom {
+    background-color: #ffffff;
+    width: 35px;
+    height: 2px;
+    display: block;
+    margin-bottom: 9px;
+    transition: transform 0.3s;
+    margin-bottom: 0;
+  }
+  .l-header__burgerLineBottom.is-open {
+    background-color: #000000;
     transform: translateY(-11px) rotate(-135deg);
   }
 }

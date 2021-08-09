@@ -6,18 +6,16 @@
   width: 100%;
   color: $color_white;
   transition: all 0.3s;
-
   &.is-fixed {
     color: $color_black;
     background-color: $color_white;
     transition: all 0.3s;
-    .l-header__burgerLine {
-      background-color: $color_black;
-      transition: all 0.3s;
-    }
   }
   &.is-sticky {
     position: sticky;
+    color: $color_black;
+    background-color: $color_white;
+    transition: all 0.3s;
   }
 }
 
@@ -107,7 +105,11 @@
   }
 }
 
-.l-header__burgerLine {
+.l-header__burgerLineTop {
+  &.is-fixed {
+    background-color: $color_black;
+    transition: all 0.3s;
+  }
   &.is-sticky {
     background-color: $color_black;
     transition: all 0.3s;
@@ -119,20 +121,87 @@
     display: block;
     margin-bottom: 9px;
     transition: transform 0.3s;
-    &:last-child {
-      margin-bottom: 0;
-    }
-    .is-open & {
+    &.is-open {
       background-color: $color_black;
-      &:nth-child(1) {
-        transform: translateY(11px) rotate(135deg);
-      }
-      &:nth-child(2) {
-        transform: translateX(-18px) scaleX(0);
-      }
-      &:nth-child(3) {
-        transform: translateY(-11px) rotate(-135deg);
-      }
+      transform: translateY(11px) rotate(135deg);
     }
   }
 }
+
+.l-header__burgerLineMiddle {
+  &.is-fixed {
+    background-color: $color_black;
+    transition: all 0.3s;
+  }
+  &.is-sticky {
+    background-color: $color_black;
+    transition: all 0.3s;
+  }
+  @include mq-down(md) {
+    background-color: $color_white;
+    width: 35px;
+    height: 2px;
+    display: block;
+    margin-bottom: 9px;
+    transition: transform 0.3s;
+    &.is-open {
+      background-color: $color_black;
+      transform: translateX(-18px) scaleX(0);
+    }
+  }
+}
+
+.l-header__burgerLineBottom {
+  &.is-fixed {
+    background-color: $color_black;
+    transition: all 0.3s;
+  }
+  &.is-sticky {
+    background-color: $color_black;
+    transition: all 0.3s;
+  }
+  @include mq-down(md) {
+    background-color: $color_white;
+    width: 35px;
+    height: 2px;
+    display: block;
+    margin-bottom: 9px;
+    transition: transform 0.3s;
+    margin-bottom: 0;
+    &.is-open {
+      background-color: $color_black;
+      transform: translateY(-11px) rotate(-135deg);
+    }
+  }
+}
+
+
+// .l-header__burgerLine {
+//   &.is-sticky {
+//     background-color: $color_black;
+//     transition: all 0.3s;
+//   }
+//   @include mq-down(md) {
+//     background-color: $color_white;
+//     width: 35px;
+//     height: 2px;
+//     display: block;
+//     margin-bottom: 9px;
+//     transition: transform 0.3s;
+//     &:last-child {
+//       margin-bottom: 0;
+//     }
+//     &.is-open {
+//       background-color: $color_black;
+//       &:nth-child(1) {
+//         transform: translateY(11px) rotate(135deg);
+//       }
+//       &:nth-child(2) {
+//         transform: translateX(-18px) scaleX(0);
+//       }
+//       &:nth-child(3) {
+//         transform: translateY(-11px) rotate(-135deg);
+//       }
+//     }
+//   }
+// }

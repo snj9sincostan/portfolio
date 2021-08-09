@@ -14,6 +14,7 @@ jQuery(document).ready(() => {
   const addHeaderStyle = () => {
     const $window = $(window);
     const $header = $(".js-header");
+    const $burgerLine = $(".js-burger-line");
     const $firstView = $(".js-firstview");
     const $firstViewHeight = $firstView.outerHeight();
     const fixed = "is-fixed";
@@ -23,8 +24,10 @@ jQuery(document).ready(() => {
       const value = $window.scrollTop();
       if ($firstViewHeight - headerHeight <= value) {
         $header.addClass(fixed);
+        $burgerLine.addClass(fixed);
       } else if ($firstViewHeight - headerHeight >= value) {
         $header.removeClass(fixed);
+        $burgerLine.removeClass(fixed);
       }
     }
 

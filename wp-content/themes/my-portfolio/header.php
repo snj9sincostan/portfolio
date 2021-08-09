@@ -26,9 +26,9 @@
         ));
       ;?>
       <div class="l-header__burger js-burger-open js-burger-icon">
-        <span class="l-header__burgerLine"></span>
-        <span class="l-header__burgerLine"></span>
-        <span class="l-header__burgerLine"></span>
+        <span class="l-header__burgerLineTop js-burger-open js-burger-line <?php append_style_if_not_home();?>"></span>
+        <span class="l-header__burgerLineMiddle js-burger-open js-burger-line <?php append_style_if_not_home();?>"></span>
+        <span class="l-header__burgerLineBottom js-burger-open js-burger-line <?php append_style_if_not_home();?>"></span>
       </div>
     </div>
   </header>
