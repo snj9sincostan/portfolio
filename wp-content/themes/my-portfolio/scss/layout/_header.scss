@@ -7,27 +7,6 @@
   color: $color_white;
   transition: all 0.3s;
 
-  @include mq-down(md) {
-  .is-show & {
-      &__list {
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: $color_white;
-        width: 100vw;
-        height: 100vh;
-        margin: 0;
-        padding-top: 70px;
-        z-index: -1;
-      }
-      &__item {
-        text-align: center;
-        margin-top: 20px;
-      }
-    }
-  }
-
   &.is-fixed {
     color: $color_black;
     background-color: $color_white;
@@ -39,18 +18,6 @@
   }
   &.is-sticky {
     position: sticky;
-    color: $color_black;
-    background-color: $color_white;
-    transition: all 0.3s;
-    .l-header__burgerLine {
-      background-color: $color_black;
-      transition: all 0.3s;
-    }
-  }
-  &.is-active {
-    .l-header__logo {
-      color: $color_black;
-    }
   }
 }
 
@@ -71,6 +38,11 @@
   &:hover {
     opacity: 0.8;
   }
+  @include mq-down(md) {
+    &.is-open {
+      color: $color_black;
+    }
+  }
   @include mq-down(sm) {
     width: 150px;
     height: 40px;
@@ -84,7 +56,7 @@
   @include mq-down(md) {
     display: none;
     max-width: 375px;
-    &.is-show {
+    &.is-open {
       color: $color_black;
       background-color: $color_white;
       display: block;
@@ -95,6 +67,20 @@
 .l-header__list {
   display: flex;
   justify-content: space-between;
+  @include mq-down(md) {
+    &.is-open  {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: $color_white;
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      padding-top: 70px;
+      z-index: -1;
+    }
+  }
 }
 
 .l-header__item {
@@ -102,10 +88,17 @@
   &:hover {
     opacity: 0.8;
   }
+  @include mq-down(md) {
+    &.is-open {
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
 }
 
 .l-header__burger {
   display: none;
+  background-color: blue;
   @include mq-down(md) {
     background-color: transparent;
     border: none;
@@ -115,6 +108,10 @@
 }
 
 .l-header__burgerLine {
+  &.is-sticky {
+    background-color: $color_black;
+    transition: all 0.3s;
+  }
   @include mq-down(md) {
     background-color: $color_white;
     width: 35px;

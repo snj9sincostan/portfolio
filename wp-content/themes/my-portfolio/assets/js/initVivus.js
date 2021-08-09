@@ -15,8 +15,8 @@ const initVivus = () => {
     animTimingFunction: Vivus.EASE
   };
 
-  new Vivus('catchcopy-pc', vivusProperty);
-  new Vivus('catchcopy-sp', vivusPropertySp);
+  new Vivus('js-catchcopy-pc', vivusProperty);
+  new Vivus('js-catchcopy-sp', vivusPropertySp);
 }
 
 initVivus();

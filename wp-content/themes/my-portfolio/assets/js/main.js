@@ -4,7 +4,7 @@ jQuery(document).ready(() => {
     const $headerLink = $(`a[href*="#"]`);
     const property = {
       speed: 900,
-      header: ".l-header"
+      header: ".js-header"
     }
     const scrollAction = new SmoothScroll('a[href*="#"]', property);
 
@@ -13,8 +13,8 @@ jQuery(document).ready(() => {
 
   const addHeaderStyle = () => {
     const $window = $(window);
-    const $header = $(".l-header");
-    const $firstView = $("#firstview");
+    const $header = $(".js-header");
+    const $firstView = $(".js-firstview");
     const $firstViewHeight = $firstView.outerHeight();
     const fixed = "is-fixed";
     const headerHeight = 70;
@@ -32,11 +32,10 @@ jQuery(document).ready(() => {
   }
 
   const changeBurgerMenu = () => {
-    const $body = $("body");
-    const $header = $(".l-header");
-    const $burgerIcon = $(".l-header__burger");
-    const $headerNav = $(".l-header__nav");
-    const $navItem = $(".l-header__item");
+    const $body = $(".js-body");
+    const $changeStateElements = $(".js-burger-open")
+    const $burgerIcon = $(".js-burger-icon");
+    const $headerItem = $(".js-header-item");
 
     const clickCloseNavMenu = () => {
       $burgerIcon.trigger("click");
@@ -44,18 +43,16 @@ jQuery(document).ready(() => {
 
     const init = () => {
       $body.toggleClass("u-no-scroll");
-      $burgerIcon.toggleClass("is-open");
-      $headerNav.toggleClass("is-show");
-      $header.toggleClass("is-active");
-      $navItem.on("click", clickCloseNavMenu);
+      $changeStateElements.toggleClass("is-open");
+      $headerItem.on("click", clickCloseNavMenu);
     }
 
     $burgerIcon.on("click", init);
   }
 
   const changeSkillPanel = () => {
-    const $tabDataFilter = $("#tab [data-filter]");
-    const $skillIconCategory = $("#icons [data-category]");
+    const $tabDataFilter = $("#js-tab [data-filter]");
+    const $skillIconCategory = $("#js-icons [data-category]");
 
     const init = (event) => {
       event.preventDefault();

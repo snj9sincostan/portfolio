@@ -403,24 +403,6 @@ h1, h2, h3, h4, h5, p {
   color: #ffffff;
   transition: all 0.3s;
 }
-@media screen and (max-width: 768px) {
-  .is-show .l-header__list {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #ffffff;
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding-top: 70px;
-    z-index: -1;
-  }
-  .is-show .l-header__item {
-    text-align: center;
-    margin-top: 20px;
-  }
-}
 .l-header.is-fixed {
   color: #000000;
   background-color: #ffffff;
@@ -432,16 +414,6 @@ h1, h2, h3, h4, h5, p {
 }
 .l-header.is-sticky {
   position: sticky;
-  color: #000000;
-  background-color: #ffffff;
-  transition: all 0.3s;
-}
-.l-header.is-sticky .l-header__burgerLine {
-  background-color: #000000;
-  transition: all 0.3s;
-}
-.l-header.is-active .l-header__logo {
-  color: #000000;
 }
 
 .l-header__inner {
@@ -462,6 +434,11 @@ h1, h2, h3, h4, h5, p {
 .l-header__logo:hover {
   opacity: 0.8;
 }
+@media screen and (max-width: 768px) {
+  .l-header__logo.is-open {
+    color: #000000;
+  }
+}
 @media screen and (max-width: 500px) {
   .l-header__logo {
     width: 150px;
@@ -479,7 +456,7 @@ h1, h2, h3, h4, h5, p {
     display: none;
     max-width: 375px;
   }
-  .l-header__nav.is-show {
+  .l-header__nav.is-open {
     color: #000000;
     background-color: #ffffff;
     display: block;
@@ -490,6 +467,20 @@ h1, h2, h3, h4, h5, p {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .l-header__list.is-open {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding-top: 70px;
+    z-index: -1;
+  }
+}
 
 .l-header__item {
   font-size: 1.6rem;
@@ -497,9 +488,16 @@ h1, h2, h3, h4, h5, p {
 .l-header__item:hover {
   opacity: 0.8;
 }
+@media screen and (max-width: 768px) {
+  .l-header__item.is-open {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
 
 .l-header__burger {
   display: none;
+  background-color: blue;
 }
 @media screen and (max-width: 768px) {
   .l-header__burger {
@@ -510,6 +508,10 @@ h1, h2, h3, h4, h5, p {
   }
 }
 
+.l-header__burgerLine.is-sticky {
+  background-color: #000000;
+  transition: all 0.3s;
+}
 @media screen and (max-width: 768px) {
   .l-header__burgerLine {
     background-color: #ffffff;
@@ -1115,22 +1117,6 @@ Style: Contact
 @media screen and (max-width: 500px) {
   .p-contact-form__textarea {
     height: 315px;
-  }
-}
-
-.p-contact-form__button {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-around;
-  margin-top: 40px;
-}
-@media screen and (max-width: 500px) {
-  .p-contact-form__button {
-    display: block;
-    margin-top: 60px;
-  }
-  .p-contact-form__button__fix {
-    margin: 20px auto 0;
   }
 }
 

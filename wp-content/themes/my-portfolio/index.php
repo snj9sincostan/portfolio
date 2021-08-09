@@ -1,11 +1,11 @@
 <?php get_header();?>
-<main class="l-main" id="js-top">
-  <section class="p-home-firstview" id="firstview">
+<main class="l-main">
+  <section class="p-home-firstview js-firstview" id="firstview">
     <div class="p-home-firstview__inner">
       <div class="p-home-firstview__hero">
         <div class="p-home-firstview__heroItem">
-          <div class="p-home-firstview__itemPc" id="catchcopy-pc"></div>
-          <div class="p-home-firstview__itemSp" id="catchcopy-sp"></div>
+          <div class="p-home-firstview__itemPc" id="js-catchcopy-pc"></div>
+          <div class="p-home-firstview__itemSp" id="js-catchcopy-sp"></div>
         </div>
       </div>
     </div>
@@ -63,12 +63,12 @@
   <section class="p-home-skill" id="skill">
     <h2 class="c-heading">Skill</h2>
     <div class="p-home-skill__body">
-      <ul class="p-home-skill__tab animate__animated" id="tab" animation="animate__fadeInUp">
+      <ul class="p-home-skill__tab animate__animated" id="js-tab" animation="animate__fadeInUp">
         <li class="p-home-skill__tabItem is-active" data-filter="all">All</li>
         <li class="p-home-skill__tabItem" data-filter="language">Language</li>
         <li class="p-home-skill__tabItem" data-filter="tools">Tools</li>
       </ul>
-      <div class="p-home-skill__list animate__animated" id="icons" animation="animate__fadeInUp">
+      <div class="p-home-skill__list animate__animated" id="js-icons" animation="animate__fadeInUp">
         <p class="p-home-skill__icon" data-category="language">
           <img class="p-home-skill__iconImage" src="<?php echo get_template_directory_uri();?>/assets/images/html5.svg" alt="HTML5">
         </p>
