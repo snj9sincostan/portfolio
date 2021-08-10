@@ -20,14 +20,3 @@ $breakpoint-down:(
     @content;
   }
 }
-
-@mixin burgerLineStyle {
-  @include mq-down(md) {
-    background-color: $color_white;
-    width: 35px;
-    height: 2px;
-    display: block;
-    margin-bottom: 9px;
-    transition: transform 0.3s;
-  }
-}
