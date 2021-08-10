@@ -96,7 +96,6 @@
 
 .l-header__burger {
   display: none;
-  background-color: blue;
   @include mq-down(md) {
     background-color: transparent;
     border: none;
