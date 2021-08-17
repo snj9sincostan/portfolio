@@ -1,0 +1,13 @@
+.p-complete-wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 50px 20px 85px;
+  height: calc(100vh - 70px - 30px);
+  @include mq-down(sm) {
+    padding-bottom: 45px;
+  }
+}
+
+.p-complete-button {
+  margin-top: 70px;
+}

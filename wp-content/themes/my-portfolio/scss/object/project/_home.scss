@@ -1,0 +1,336 @@
+/******************************************************************
+Style: FirstView
+******************************************************************/
+.p-home-firstview {
+  background-image: url(../images/Hero.png);
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  width: 1280px;
+  width: 100%;
+  height: 100vh;
+}
+
+.p-home-firstview__inner {
+  fill: none;
+  stroke: $color_white;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 0;
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+  @include mq-down(md) {
+    stroke-width: 2.5;
+  }
+}
+
+.p-home-firstview__hero {
+  position: relative;
+  height: 100vh;
+}
+
+.p-home-firstview__heroItem {
+  height: 180px;
+  max-width: 695px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  @include mq-down(md) {
+    width: 300px;
+  }
+}
+
+.p-home-firstview__itemPc {
+  width: 100%;
+  max-width: 695px;
+  margin: 0 auto;
+  @include mq-down(md) {
+    display: none;
+  }
+}
+
+.p-home-firstview__itemSp {
+  display: none;
+  @include mq-down(md) {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+/******************************************************************
+Style: About
+******************************************************************/
+.p-home-about {
+  padding: 40px 0 50px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 920px;
+}
+
+.p-home-about__inner {
+  display: flex;
+  margin-top: 20px;
+  @include mq-down(md) {
+    display: block;
+  }
+}
+
+.p-home-about__body {
+  width: 100%;
+  padding: 0 20px;
+  @include mq-down(md) {
+    max-width: 635px;
+    margin: 0 auto;
+  }
+}
+
+.p-home-about__nameWrap {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  @include mq-down(md) {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.p-home-about__name {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.p-home-about__ruby {
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+.p-home-about__description {
+  width: 100%;
+  max-width: 635px;
+  font-size: 18px;
+  margin-top: 15px;
+  line-height: 1.8;
+  @include mq-down(md) {
+    margin: 15px auto 0;
+  }
+}
+
+.p-home-about__icon {
+  width: 250px;
+  @include mq-down(md) {
+    margin: 20px auto 0;
+    width: 200px;
+  }
+}
+
+.p-home-about__iconImage {
+  display: block;
+  border-radius: 9999px;
+}
+/******************************************************************
+Style: Portfolio
+******************************************************************/
+.p-home-portfolio {
+  background-color: $home_portfolio_background;
+  padding: 40px 0 79px;
+}
+
+.p-home-portfolio__inner {
+  display: flex;
+  align-items: center;
+  max-width: 840px;
+  margin: 61px auto 0;
+  @include mq-down(md) {
+    display: block;
+  }
+}
+
+.p-home-portfolio__card {
+  border-right-color: $color_white;
+  border: none;
+  box-shadow: 2px 2px 6px 0 $home_card_shadow;
+  border-radius: 20px;
+  text-align: center;
+  width: 255px;
+  height: 316px;
+  transition: transform 0.3s;
+  background-color: $color_white;
+  padding-bottom: 15px;
+
+  @include mq-up(md) {
+    &.animate__fadeInUp {
+      &:nth-of-type(2) {
+        animation-delay: .3s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: .6s;
+      }
+    }
+    &:not(:first-child) {
+      margin-left: 50px;
+    }
+  }
+  @include mq-down(md) {
+    margin: 0 auto;
+    .animate__fadeInUp {
+      &:nth-of-type(2) {
+        animation-delay: .3s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: .3s;
+      }
+    }
+    &:not(:first-child) {
+      margin-top: 40px;
+    }
+  }
+}
+
+.p-home-portfolio__cardImage {
+  border-radius: 20px 20px 0 0;
+  height: 150px;
+}
+
+.p-home-portfolio__cardTitle {
+  min-width: 190px;
+  font-size: 2.4rem;
+  padding: 10px 5px 0;
+  text-align: center;
+}
+
+.p-home-portfolio__cardText {
+  padding: 0 20px;
+  font-size: 1.2rem;
+  letter-spacing: 1.2;
+  height: 64px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.p-home-portfolio__button {
+  width: 180px;
+  margin: 5px auto 0;
+}
+/******************************************************************
+Style: Skill
+******************************************************************/
+.p-home-skill {
+  padding: 50px 0 63px;
+}
+
+.p-home-skill__body {
+  max-width: 840px;
+  margin: 52px auto 0;
+}
+
+.p-home-skill__tab {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 100%;
+  max-width: 500px;
+  padding: 0;
+  margin: 0 auto;
+  @include mq-down(sm) {
+    padding: 0 20px;
+  }
+}
+
+.p-home-skill__tabItem {
+  border-radius: 9999px;
+  cursor: pointer;
+  font-size: 2.2rem;
+  min-width: 140px;
+  padding: 0 20px;
+  text-align: center;
+  font-weight: bold;
+  @include mq-down(sm) {
+    font-size: 1.6rem;
+    min-width: 80px;
+  }
+
+  &.is-active {
+    background-color: $color_skyblue;
+    color: $color_white;
+  }
+
+  &:hover {
+    background-color: $color_skyblue;
+    color: $color_white;
+    transition: background-color 0.3s, color 0.3s;
+  }
+}
+
+.p-home-skill__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 90px;
+  @include mq-down (lg) {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+    &::after{
+      content:"";
+      display: block;
+      width:30%;
+    }
+  }
+}
+
+.p-home-skill__icon {
+  min-width: 128px;
+  width: calc(20% - 40px);
+  margin-bottom: 80px;
+  @include mq-up (lg) {
+    &:not(:nth-of-type(5n + 1)) {
+      margin-left: 50px;
+    }
+  }
+  @include mq-down (lg) {
+    width: calc(50% - 40px);
+    &:nth-of-type(n + 3) {
+      margin-top: 40px;
+    }
+  }
+}
+
+.p-home-skill__iconImage {
+  width: 100%;
+}
+
+.p-home-skill__icon.is-animated {
+  animation: .6s rotate-right;
+}
+
+@keyframes rotate-right {
+  0% {
+    transform: translate(-100%) rotate(-100deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+/******************************************************************
+Style: Contact
+******************************************************************/
+.p-home-contact {
+  background-image: url(../images/contact_body.png);
+  background-size: cover;
+  background-position: center;
+  padding: 40px 0 78px;
+}
+
+.p-home-contact__button {
+  margin: 106px auto 0;
+  display: block;
+  width: 250px;
+  text-align: center;
+}

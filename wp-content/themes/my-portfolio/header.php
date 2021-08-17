@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shinji Nishihara | ポートフォリオ</title>
+  <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <?php wp_head(); ?>
+</head>
+<body class="js-body">
+  <header class="l-header js-header <?php append_style_if_not_home();?>">
+    <div class="l-header__inner">
+      <h1 class="l-header__logo js-burger-open">
+        <a href="<?php echo home_url();?>">
+          <svg><use xlink:href="<?php echo get_template_directory_uri();?>/assets/images/animated/instance.svg#logo"/></svg>
+        </a>
+      </h1>
+      <?php
+        wp_nav_menu( array(
+          'theme_location' => 'global-menu',
+          'container' => 'nav',
+          'container_class' => 'l-header__nav js-burger-open',
+          'menu_class' => 'l-header__list js-burger-open',
+          'depth' => 1
+        ));
+      ;?>
+      <div class="l-header__burger js-burger-open js-burger-icon">
+        <span class="l-header__burgerLineTop js-burger-open js-burger-line <?php append_style_if_not_home();?>"></span>
+        <span class="l-header__burgerLineMiddle js-burger-open js-burger-line <?php append_style_if_not_home();?>"></span>
+        <span class="l-header__burgerLineBottom js-burger-open js-burger-line <?php append_style_if_not_home();?>"></span>
+      </div>
+    </div>
+  </header>
